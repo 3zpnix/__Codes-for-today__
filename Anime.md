@@ -15,7 +15,9 @@ Anime Watched: (200+)
 > Konosuba Movie: Legend of Crimson (2019) [1]
 > Konosuba Spin-off: An Explosion on This Wonderful World! (2023)
 
-- Redo of Healer (S2)
+- Redo of Healer (S2?)
+> Redo of Healer Season 1 (2021)
+
 - Evangelion
 - The Familiar Of Zero
 - Yosuga no sora
