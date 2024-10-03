@@ -15,10 +15,18 @@ Anime Watched: (200+)
 > Konosuba Movie: Legend of Crimson (2019) [1]
 > Konosuba Spin-off: An Explosion on This Wonderful World! (2023)
 
+- Evangelion (Done)
+> Neon Genesis Evangelion (1995-1996)
+> Evangelion: Death (True) (1997)
+> The End of Evangelion (1997)
+> Evangelion: 1.11 You Are (Not) Alone (2007) 
+> Evangelion: 2.22 You Can (Not) Advance (2009)
+> Evangelion: 3.33 You Can (Not) Redo (2012)
+> Evangelion 3.0+1.0 Thrice Upon a Time (2021)
+
 - Redo of Healer (S2?)
 > Redo of Healer Season 1 (2021)
 
-- Evangelion
 - The Familiar Of Zero
 - Yosuga no sora
 - Golden Time
