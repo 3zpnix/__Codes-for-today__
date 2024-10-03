@@ -7,7 +7,14 @@ Currently Watching/Paused:
 
 Anime Watched: (200+)
 
-- Konosuba (S3)
+- Konosuba (S3?)
+> Konosuba: God's Blessing on This Wonderful World! Season 1 (2016)
+> Konosuba OVA 1: God's Blessing on This Wonderful Choker! (2016)
+> Konosuba: God's Blessing on This Wonderful World! Season 2 (2017)
+> Konosuba OVA 2: God's Blessing on This Wonderful Art! (2017)
+> Konosuba Movie: Legend of Crimson (2019) [1]
+> Konosuba Spin-off: An Explosion on This Wonderful World! (2023)
+
 - Redo of Healer (S2)
 - Evangelion
 - The Familiar Of Zero
