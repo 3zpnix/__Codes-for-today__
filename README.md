@@ -17,7 +17,21 @@ main()
 
 ======
 
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+main()
+{
+   int i=0,A[10],B[10];
+   for(i=0;i<10;i++)
+       A[i]=rand()%10;
+   for(i=0;i<10;i++)
+       printf("A[%d]=%d\n",i,A[i]);
+   for(i=0;i<10;i++)
+       B[i]=A[i];    
+   for(i=0;i<10;i++)
+       printf("B[%d]=%d\n",i,B[i]); 
+}
 
 ======
 
