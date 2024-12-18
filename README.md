@@ -20,6 +20,7 @@ main()
 
 ======
 
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -35,9 +36,11 @@ main()
    for(i=0;i<10;i++)
        printf("B[%d]=%d\n",i,B[i]); 
 }
+```
 
 ======
 
+```
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <time.h> 
@@ -64,5 +67,6 @@ main()
     for(i=0;i<j;i++)
         printf("B[%d]=%d\n",i,B[i]);
 }
+```
 
 ======
