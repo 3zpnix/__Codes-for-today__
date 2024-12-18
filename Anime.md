@@ -1,7 +1,7 @@
 LOG1222
 
 Currently Watching/Paused:
-× Gosick (S1E1) 
+× none
 
 (⁠个⁠_⁠个⁠)
 
