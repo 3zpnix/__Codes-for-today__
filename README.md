@@ -1,7 +1,7 @@
 你好, Please delete this tab once you're done, thank you! from MJK <3
 
 ```
-Just press the copy button ->
+Just press the copy button >
 ```
 
 1st ====== (1218_1.c)
