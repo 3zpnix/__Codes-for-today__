@@ -1,36 +1,26 @@
 #include <stdio.h>
-
-int main() {
-    int i, j, k;
-
-    printf("Enter the number of rows: ");
-    scanf("%d", &k);
-
-    // Upper half of the diamond
-    for (i = 1; i <= k; i++) {
-        // Print spaces
-        for (j = 1; j <= k - i; j++) {
-            printf(" ");
-        }
-        // Print asterisks
-        for (j = 1; j <= 2 * i - 1; j++) {
-            printf("*");
-        }
-        printf("\n");
+#include <stdlib.h>
+#include <time.h>
+main()
+{
+    srand((unsigned)time(NULL));
+    int i=0,A[10],B[10],j=0;
+    
+    for(i=0;i<10;i++)
+        A[i]=rand()%101;
+        
+    for(i=0;i<10;i++)
+        printf("A[%d]=%d\n",i,A[i]);
+        
+    for(i=0;i<10;i++)
+    {    if(A[i]>=60)
+        {
+            B[j]=A[i];
+            j++;
+        }    
     }
-
-    // Lower half of the diamond (excluding the middle row)
-    for (i = k - 1; i >= 1; i--) {
-        // Print spaces
-        for (j = 1; j <= k - i; j++) {
-            printf(" ");
-        }
-        // Print asterisks
-        for (j = 1; j <= 2 * i - 1; j++) {
-            printf("*");
-        }
-        printf("\n");
-    }
-
-    return 0;
+    printf("\nThe number of pass:%d\n");
+    printf("-------------------------\n");
+    for(i=0;i<j;i++)
+        printf("B[%d]=%d\n",i,B[i]);
 }
