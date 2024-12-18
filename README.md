@@ -19,7 +19,7 @@ main()
             j++;
         }    
     }
-    printf("\nThe number of pass:%d\n");
+    printf("\nThe number of pass:%d\n",j);
     printf("-------------------------\n");
     for(i=0;i<j;i++)
         printf("B[%d]=%d\n",i,B[i]);
