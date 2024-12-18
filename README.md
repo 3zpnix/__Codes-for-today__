@@ -1,3 +1,26 @@
+======
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+main()
+{
+   int i=0,A[10];
+   for(i=0;i<5;i++)
+   {
+        printf("Input A[%d]: ",i);
+        scanf("%d",&A[i]);
+        }
+        for(i=0;i<10;i++)
+        printf("A[%d]=%d\n",i,A[i]);
+}
+
+======
+
+
+
+======
+
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <time.h> 
