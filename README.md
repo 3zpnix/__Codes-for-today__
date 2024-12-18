@@ -1,5 +1,7 @@
 ======
 
+
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -14,6 +16,7 @@ main()
         for(i=0;i<10;i++)
         printf("A[%d]=%d\n",i,A[i]);
 }
+```
 
 ======
 
