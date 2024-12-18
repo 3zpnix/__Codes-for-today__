@@ -42,7 +42,6 @@ main()
 {
     srand((unsigned)time(NULL));
     int i=0,A[10],B[10],j=0;
-    
     for(i=0;i<10;i++)
         A[i]=rand()%101;
         
