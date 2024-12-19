@@ -1,4 +1,4 @@
-你好, Please delete this on your browser once you're done, thank you! from MJK <3
+你好, Once you're done copying it, remove this tab from your browser thank you! from MJK <3
 
 ```
 Just press the copy button >
