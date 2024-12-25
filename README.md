@@ -22,7 +22,7 @@ main()
        printf("%3d", A[i]);
    printf("\n");
    for(i=0;i<10;i++)
-
+{
    if(A[i]==0) num_0++;
    else if (A[i]==1) num_l++;
         else if (A[i]==2)num_2++;
