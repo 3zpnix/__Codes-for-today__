@@ -24,9 +24,9 @@ main()
    for(i=0;i<10;i++)
 {
    if(A[i]==0)num_0++;
-   else if (A[i]==1)num_1++;
-        else if (A[i]==2)num_2++;
-            else if (A[i]==3)num_3++;
+   else if(A[i]==1)num_1++;
+        else if(A[i]==2)num_2++;
+            else if(A[i]==3)num_3++;
                 else num_4++;   
 }
     printf("num_0:%d\n", num_0);
@@ -48,9 +48,9 @@ main()
    int A[10], i;
    int num_3=0, num_4=0,B[5]={0};
    srand((unsigned)time(NULL));
-   for (i=0; i<10; i++)
-       A[i] = rand()%5;
-   for (i=0; i<10; i++)
+   for (i=0;i<10;i++)
+       A[i]=rand()%5;
+   for (i=0;i<10;i++)
        printf("%3d", A[i]);
    printf("\n");
    for(i=0; i<10; i++)
@@ -61,8 +61,8 @@ main()
             else if (A[i]==3) B[3]++;
                 else B[4]++;
 }
-for (i=0; i<5; i++)
-printf("B[%d] = %d\n",i,B[i]);
+for (i=0;i<5;i++)
+printf("B[%d]=%d\n",i,B[i]);
 }
 ```
 
@@ -77,12 +77,12 @@ main()
    int A[10], i;
    int B[5]={0};
    srand((unsigned)time(NULL));
-   for (i=0; i<10; i++)
-       A[i] = rand()%5;
-   for (i=0; i<10; i++)
-       printf("%3d", A[i]);
+   for (i=0;i<10;i++)
+       A[i]=rand()%5;
+   for (i=0;i<10;i++)
+       printf("%3d",A[i]);
    printf("\n");
-   for(i=0; i<10; i++)
+   for(i=0;i<10;i++)
 {
     switch(A[i])
     {
