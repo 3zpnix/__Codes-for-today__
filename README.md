@@ -1,4 +1,4 @@
-你好, Once you're done copying it, remove this tab from your browser. Happy coding!
+你好, Once you're done copying it, remove this tab from your browser. Happy coding! uwu
 
 ```
 Just press the copy button >
