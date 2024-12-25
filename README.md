@@ -110,5 +110,21 @@ main()
 
 4th ====== (1225_4.c)
 ```
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+main()
+{
+   int A[10],i,B[5]={0};
+   srand((unsigned)time(NULL));
+   for(i=0; i<10; i++)
+       A[i] = rand()%5;
+   for(i=0; i<10; i++)
+       printf("%3d",A[i]);
+       printf("\n");
+   for(i=0; i<10; i++)
+       B[A][i]]++;
+   for(i=0;i<10;i++)
+       printf("B[%d]=%d\n",i,B[i]);
+}
 ```
