@@ -16,10 +16,10 @@ main()
    int A[10],i,num_0=0,num_1=0,num_2=0;
    int num_3=0,num_4=0;
    srand((unsigned)time(NULL));
-   for(i=0; i<10; i++)
+   for(i=0;i<10;i++)
        A[i]=rand()%5;
-   for(i=0; i<10; i++)
-       printf("%3d", A[i]);
+   for(i=0;i<10;i++)
+       printf("%3d",A[i]);
    printf("\n");
    for(i=0;i<10;i++)
 {
