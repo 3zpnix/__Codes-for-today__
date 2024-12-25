@@ -13,30 +13,26 @@ Just press the copy button >
 #include <time.h>
 main()
 {
-   int A[10], i, num_0=0,num_1=0,num_2=0;
-   int num_3=0, num_4=0,B[5]={0};
+   int A[10],i,num_0=0,num_1=0,num_2=0;
+   int num_3=0,num_4=0;
    srand((unsigned)time(NULL));
-   for (i=0; i<10; i++)
-       A[i] = rand()%5;
-   for (i=0; i<10; i++)
+   for(i=0; i<10; i++)
+       A[i]=rand()%5;
+   for(i=0; i<10; i++)
        printf("%3d", A[i]);
    printf("\n");
    for(i=0;i<10;i++)
 {
-   if(A[i]==0) num_0++;
-   else if (A[i]==1) num_l++;
+   if(A[i]==0)num_0++;
+   else if (A[i]==1)num_1++;
         else if (A[i]==2)num_2++;
-            else if (A[i]==3) num_3++;
-                else num_4++;
+            else if (A[i]==3)num_3++;
+                else num_4++;   
 }
     printf("num_0:%d\n", num_0);
-
     printf("num_1:%d\n", num_1);
-
     printf("num_2:%d\n", num_2);
-
     printf("num_3:%d\n", num_3);
-
     printf("num_4:%d\n", num_4);
 }
 ```
