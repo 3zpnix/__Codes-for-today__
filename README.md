@@ -26,7 +26,7 @@ main()
    if(A[i]==0) num_0++;
    else if (A[i]==1) num_l++;
         else if (A[i]==2)num_2++;
-            else if (A[i]==3) num-3++;
+            else if (A[i]==3) num_3++;
                 else num_4++;
 }
     printf("num_0:%d\n", num_0);
