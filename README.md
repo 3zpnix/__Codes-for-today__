@@ -73,7 +73,43 @@ printf("B[%d] = %d\n",i,B[i]);
 3rd ====== (1225_3.c)
 
 ```
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+main()
+{
+   int A[10], i;
+   int B[5]={0};
+   srand((unsigned)time(NULL));
+   for (i=0; i<10; i++)
+       A[i] = rand()%5;
+   for (i=0; i<10; i++)
+       printf("%3d", A[i]);
+   printf("\n");
+   for(i=0; i<10; i++)
+{
+    switch(A[i])
+    {
+    	case 0:
+    		B[0]++;
+			break; 
+		case 1:
+    		B[1]++;
+			break; 
+		case 2:
+    		B[2]++;
+			break; 
+		case 3:
+    		B[3]++;
+			break; 
+		case 4:
+    		B[4]++;
+			break; 
+		default:
+			printf("Error\n");
+		}
+	}
+}
 ```
 
 4th ====== (1225_4.c)
