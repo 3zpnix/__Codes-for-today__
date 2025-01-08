@@ -14,7 +14,7 @@ Just press the copy button >
 main()
 {
 	srand((unsigned)time(NULL));
-	int A[10],i,B[5]={0},k=0;
+	int A[10],i,B[10]={0},k=0;
 	
 	for(i=0;i<10;i++)
 		A[i]=10+rand()%11;
