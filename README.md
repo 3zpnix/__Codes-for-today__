@@ -8,7 +8,29 @@ Just press the copy button >
 
 
 ```
-NOT YET
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h> 
+main()
+{
+	int A[10],i,B[5]={0},k=0;
+	
+	for(i=0;i<10;i++)
+		A[i]=10+rand()%11;
+	for(i=0;i<10;i++)
+		printf(" %d ",A[i]);
+		printf("\n");
+	for(i=0;i<10;i++)
+	{
+		if((A[i]%2)==0)
+		{
+			B[k]=A[i];
+			k++;
+		}
+	}
+	for(i=0;i<k;i++)
+		printf(" %d ",B[i]);
+}
 ```
 
 2nd ====== (1225_2.c)
