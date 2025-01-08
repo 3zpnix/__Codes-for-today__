@@ -10,9 +10,10 @@ Just press the copy button >
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio.h> 
+#include <time.h> 
 main()
 {
+	srand((unsigned)time(NULL));
 	int A[10],i,B[5]={0},k=0;
 	
 	for(i=0;i<10;i++)
