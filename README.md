@@ -12,6 +12,7 @@ Just press the copy button >
 #include <stdlib.h>
 #include <time.h>
 
+main(){
 int i,A[5],x;
 while(1)
 {
