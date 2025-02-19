@@ -4,33 +4,60 @@
 Just press the copy button >
 ```
 
-1st ====== (1225_1.c)
+1st ====== (0219_1.c)
 
 
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h> 
-main()
+#include <time.h>
+
+int i,A[5],x;
+while(1)
 {
-	srand((unsigned)time(NULL));
-	int A[10],i,B[10]={0},k=0;
-	
-	for(i=0;i<10;i++)
-		A[i]=10+rand()%11;
-	for(i=0;i<10;i++)
-		printf(" %d ",A[i]);
-		printf("\n");
-	for(i=0;i<10;i++)
-	{
-		if((A[i]%2)==0)
-		{
-			B[k]=A[i];
-			k++;
-		}
-	}
-	for(i=0;i<k;i++)
-		printf(" %d ",B[i]);
+    printf("Input:");
+    scanf("%d",&x);
+    if(x<=100)
+    {
+    A[i]=x;
+    i++
+    }
+if(i==5)
+break;
+}
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int i=0,A[4],B[4]={0};
+while(k<5)
+{
+    x=rand()%5%
+    if(!B[x])
+    {
+    A[0]=x;
+    i++
+    B[x]=1;
+    k++
+    }
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int i=0;
+for(i=0,i<5,i++);
+    printf("i=%d\n",i);
+    while(i<5)
+    {
+    printf("i=%d\n",i);
+    i++
+    }
 }
 ```
 
