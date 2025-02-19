@@ -88,6 +88,7 @@ do{
 		A[i]=x; 
 		i++;
 	}
-}while(i=5);
-} printf("**\n");
+} while(i=5);
+printf("**\n");
+}
 ```
