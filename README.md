@@ -35,8 +35,9 @@ for(i=0;i<5;i++);
     printf("*");
     }
 }
-
+```
 3rd ======
+
 ```
 #include <stdio.h>
 #include <stdlib.h>
