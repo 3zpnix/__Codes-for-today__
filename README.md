@@ -20,7 +20,7 @@ while(1)
     if(x<=100)
     {
     A[i]=x;
-    i++
+    i++;
     }
 if(i==5)
 break;
@@ -40,9 +40,9 @@ while(k<5)
     if(!B[x])
     {
     A[0]=x;
-    i++
+    i++;
     B[x]=1;
-    k++
+    k++;
     }
 }
 
@@ -56,7 +56,7 @@ for(i=0,i<5,i++);
     while(i<5)
     {
     printf("i=%d\n",i);
-    i++
+    i++;
     }
 }
 ```
