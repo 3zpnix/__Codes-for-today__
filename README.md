@@ -147,10 +147,9 @@ while(1)
 #include <time.h>
 
 main(){
-int i=0,x,k,A[4],B[4]={0}; 
-srand(time(NULL));
-while(x<5) 
-	{
+	int i=0,x,k,A[4],B[4]={0}; 
+	srand(time(NULL));
+	while(k<5) {
 	x=rand()%5;
 	if(!B[x])
     {
