@@ -60,10 +60,8 @@ for(i=0,i<5,i++);
     i++;
     }
 }
-```
 
 1st ====== 
-
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -80,6 +78,22 @@ for(i=0,i<5,i++)
     }
 }
 ```
+
+2nd ======
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+main(){
+int i=0;
+for(i=0;i<5;i++);
+    printf("i=%d\n",i);
+    while(i<5)
+    {
+    printf("*");
+    }
+}
 
 4th ====== 
 
