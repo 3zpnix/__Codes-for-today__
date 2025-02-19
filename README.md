@@ -98,7 +98,6 @@ printf("**\n");
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 main(){
 int i,A[5],x;
@@ -122,7 +121,6 @@ int i,A[5],x;
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 main(){
 int i,A[5],x;
