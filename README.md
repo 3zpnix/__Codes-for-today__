@@ -92,3 +92,27 @@ do{
 printf("**\n");
 }
 ```
+
+7th ====== 
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+main(){
+int i,A[5],x;
+while(1)
+{
+    printf("Input: ");
+    scanf("%d",&x);
+    if(x<=100)
+    {
+    	A[i]=x;
+    	i++;
+    }
+	if(i==5)
+	break;
+	}
+}
+```
