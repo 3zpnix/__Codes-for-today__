@@ -138,3 +138,29 @@ while(1)
 	}
 }
 ```
+
+8th ====== 
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+main(){
+int i=0,x,k,A[4],B[4]={0}; 
+while(x<5)
+{ 
+	for(i=0;i<5;i++)
+	printf("A[%d]=%d",i,A[i]); 
+	i++;
+}
+	x=rand()%5;
+	if(!B[x])
+    {
+    A[0]=x;
+    i++;
+    B[x]=1;
+    k++;
+	}
+}
+```
