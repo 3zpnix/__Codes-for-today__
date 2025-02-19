@@ -148,12 +148,9 @@ while(1)
 
 main(){
 int i=0,x,k,A[4],B[4]={0}; 
-while(x<5)
-{ 
-	for(i=0;i<5;i++)
-	printf("A[%d]=%d",i,A[i]); 
-	i++;
-}
+srand(time(NULL));
+while(x<5) 
+	{
 	x=rand()%5;
 	if(!B[x])
     {
@@ -162,5 +159,8 @@ while(x<5)
     B[x]=1;
     k++;
 	}
+}
+	for(i=0;i<5;i++)
+	printf("A[%d]=%d",i,A[i]); 
 }
 ```
