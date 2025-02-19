@@ -151,8 +151,8 @@ main(){
 	srand(time(NULL));
 	while(k<5) {
 	x=rand()%5;
-	if(!B[x])
-    {
+	
+	if(!B[x]) {
     A[0]=x;
     i++;
     B[x]=1;
@@ -160,6 +160,6 @@ main(){
 	}
 }
 	for(i=0;i<5;i++)
-	printf("A[%d]=%d",i,A[i]); 
+	printf("A[%d]=%d\n",i,A[i]); 
 }
 ```
