@@ -4,7 +4,7 @@
 Just press the copy button >
 ```
 
-1st ====== (0219_1.c)
+1st ====== 
 
 
 ```
@@ -62,14 +62,26 @@ for(i=0,i<5,i++);
 }
 ```
 
-2nd ====== (1225_2.c)
+2nd ====== 
 
 ```
 
 ```
 
-3rd ====== (1225_3.c)
+4th ====== 
 
 ```
+#include <stdio.h>
+#include <stdlib.h>
 
+main(){
+int i;
+do{
+	printf("Input:");
+	scanf("%d",&i);
+	printf("i=%d\n",i);
+	i++;
+} while(i<5);
+printf("***\n");
+}
 ```
