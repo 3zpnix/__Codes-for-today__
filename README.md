@@ -93,6 +93,30 @@ printf("**\n");
 }
 ```
 
+6th ====== 
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+main(){
+int i,A[5],x;
+    printf("Input: ");
+    scanf("%d",&x);
+    for(i=0;i<5;i++);
+    {
+    printf("Input: ");
+    scanf("%d",&x);
+    if(x<=100)
+    {
+    	A[i]=x;
+    	i++;
+		}
+	}
+}
+```
+
 7th ====== 
 
 ```
