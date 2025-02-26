@@ -88,6 +88,7 @@ main() {
     {
     printf("Input a char:");
     scanf("%c",&A[i]);
+    fflush(stdin);
     i++;
     }
     A[i]='\0';
