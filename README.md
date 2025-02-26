@@ -57,10 +57,11 @@ main() {
 
 main() {
     int i=0,length,j;
-    char c,A[10];
+    char A[10];
     printf("Input a string:");
-    scanf("%s\n",&A);
-    while(i<5)
+    scanf("%s",&A);
+    printf("%s\n");
+    while(A[i]!='\0')
         i++;
     printf("string length:%d\n",i);
     length=i;
