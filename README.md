@@ -145,11 +145,30 @@ main() {
 7th ====== 
 
 ```
-
+trabaho mamaya, yesss
 ```
 
 8th ====== 
 
 ```
-uwu, trabaho unya
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+main() {  
+    int i = 0;
+    char c, A[100];
+
+    while((c = getchar()) != '9') 
+    {  
+        A[i] = c;
+        i++;
+        if (i >= 99) {
+            break;
+        }
+    }
+
+    A[i] = '\0'; 
+    puts(A);  
+}
 ```
