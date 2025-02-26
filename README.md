@@ -106,7 +106,7 @@ main() {
     while(i>=0)
     {
     printf("Input a char:");
-    scanf("%c",c);
+    scanf("%c",&c);
     if(c=='9');
         break;
     A[i]=c;
