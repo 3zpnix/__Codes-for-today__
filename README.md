@@ -59,8 +59,8 @@ main() {
     int i=0,length,j;
     char A[10];
     printf("Input a string:");
-    scanf("%s",&A);
-    printf("%s\n");
+    scanf("%s",A);
+    printf("%s\n",A);
     while(A[i]!='\0')
         i++;
     printf("string length:%d\n",i);
