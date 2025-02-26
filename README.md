@@ -143,20 +143,7 @@ main() {
 7th ====== 
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
 
-main() {
-    int i=0;
-    char c,A[100];
-    while((c=getchar())!='9')
-    {
-    A[i]=c;
-    i++;
-    }
-    puts(A);
-}
 ```
 
 8th ====== 
