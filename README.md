@@ -59,7 +59,7 @@ main() {
     int i=0,length,j;
     char c,A[10];
     printf("Input a string:");
-    scanf("%s\n",&A[i]);
+    scanf("%s\n",&A);
     while(i<5)
         i++;
     printf("string length:%d\n",i);
