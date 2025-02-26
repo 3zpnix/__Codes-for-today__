@@ -155,13 +155,13 @@ trabaho mamaya, yesss
 #include <stdlib.h>
 #include <conio.h>
 
-main() {  
-    int i = 0;
-    char c, A[100];
-
-    while((c = getchar()) != '9') 
+main() 
+{  
+    int i=0;
+    char c,A[100];
+    while((c=getchar())!='9') 
     {  
-        A[i] = c;
+        A[i]=c;
         i++;
         if (i >= 99) {
             break;
