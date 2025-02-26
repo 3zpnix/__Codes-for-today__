@@ -125,7 +125,7 @@ main() {
 
 main() {
     int i,j;
-    char c,A[100],B[100];
+    char c,A[100];
     while(1)
     {
     printf("Input a char:");
@@ -137,15 +137,6 @@ main() {
     }
     A[i]='\0';
     printf("%s\n",A);
-    i--;
-    while(i>=0)
-    {
-    B[j]=A[i];
-    j++;
-    i--;
-    }
-    printf("%s",B);
-    B[i]='10';
 }
 ```
 
