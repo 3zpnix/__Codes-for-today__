@@ -1,12 +1,18 @@
--2018
+1219
 
-I'm fucking tired iii wantt to die
+1st
+```
+#include <stdio.h>
+#include <stdlib.h>
 
-pleaseee kill mee
-idont wnat to livee jnn this shittt
-
-dontt leave mee, ,?  
-
- dpressed//? nah u fickking douchehead stjpid shit
-
- sorrysorryu it s me trhe fucking iditoti kill meee
+main() {
+    int i;
+    for(i=0;i<5;i++)
+        printf("i=%d\n",i);
+    while(i<5)
+    {
+    printf("i=%d\n",i);
+    i++;
+    }
+}
+```
