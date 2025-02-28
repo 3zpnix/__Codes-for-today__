@@ -50,3 +50,23 @@ main() {
     printf("***\n");
 }
 ```
+
+5th
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+    int i=0,A[5]={0},x;
+    do{
+        printf("Input A[d]= ",i);
+        scanf("%d",&x);
+        if(A[i]<=100);
+        {
+            A[i]=x;
+            i++;
+        }
+    } while(i==5);
+    printf("***\n");
+}
+```
