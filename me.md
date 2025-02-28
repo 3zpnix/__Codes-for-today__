@@ -1,4 +1,4 @@
-1219
+0219
 
 1st
 ```
@@ -13,6 +13,23 @@ main() {
     {
     printf("i=%d\n",i);
     i++;
+    }
+}
+```
+
+3rd
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+    int i=0;
+    while(1)
+    {
+    printf("i=%d\n",i);
+    i=i*i;
+    if(i<15)
+        i=i+2;
     }
 }
 ```
