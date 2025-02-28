@@ -40,7 +40,7 @@ main() {
 #include <stdlib.h>
 
 main() {
-    int i=0;
+    int i;
     do{
         printf("Input: ");
         scanf("%d",&i);
