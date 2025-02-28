@@ -33,3 +33,20 @@ main() {
     }
 }
 ```
+
+4th
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+    int i=0;
+    do{
+        printf("Input: ");
+        scanf("%d",&i);
+        printf("i=%d\n",i);
+        i=i++;
+    } while (i<5);
+    printf("***\n");
+}
+```
