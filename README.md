@@ -3,8 +3,9 @@
 ```
 Just press the copy button >
 ```
-
-1st ====== 
+===
+1st 
+===
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,8 +27,9 @@ main() {
     }
 }
 ```
-
-2nd ======
+===
+2nd 
+===
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,7 +51,9 @@ main() {
     }
 }
 ```
-3rd ======
+===
+3rd
+===
 
 ```
 #include <stdio.h>
@@ -73,8 +77,9 @@ main() {
     }
 }
 ```
-
-4th ====== 
+===
+4th 
+===
 
 ```
 #include <stdio.h>
@@ -95,8 +100,9 @@ main() {
     printf("%s\n",A);
 }
 ```
-
-5th ====== 
+===
+5th
+===
 
 ```
 #include <stdio.h>
@@ -118,8 +124,9 @@ main() {
     printf("%s\n",A);
 }
 ```
-
-6th ====== 
+===
+6th 
+===
 
 ```
 #include <stdio.h>
@@ -141,14 +148,16 @@ main() {
     printf("%s\n",A);
 }
 ```
-
-7th ====== 
+===
+7th
+===
 
 ```
 trabaho mamaya, yesss
 ```
-
-8th ====== 
+===
+8th 
+===
 
 ```
 #include <stdio.h>
