@@ -190,25 +190,21 @@ extra:
 
 main() {
     char A[20];
-    int i=0, B[5]={0};
-    printf("Input string:");
-    scanf("%s",A);
-    while(A[i]!='\0')
-    {
-        if(A[i]=='A')
+    int i = 0, B[3] = {0};
+    printf("Input string: ");
+    scanf("%s", A);
+
+    while (A[i] != '\0') {
+        if (A[i] == 'A') {
             B[0]++;
-        else if (A[i]=='B')
+        } else if (A[i] == 'B') {
             B[1]++;
-        else
+        } else {
             B[2]++;
+        }
         i++;
     }
-    i=0;
-    while(i<5)
-    {
-    printf("%c:%d\n",'A'+i,A[i]);
-    i++;
-	}
-    printf("A:%d B:%d C:%d\n",B[0],B[1],B[2]);
+
+    printf("A:%d B:%d C:%d\n", B[0], B[1], B[2]);
 }
 ```
