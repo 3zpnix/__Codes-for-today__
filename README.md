@@ -140,7 +140,7 @@ main() {
 }
 ```
 ===
-7th
+7th (UPDATED)
 ===
 
 ```
@@ -148,13 +148,26 @@ main() {
 #include <stdlib.h>
 
 main() {
-    char A[20],B[5];
-    int i=0;
+    char A[20];
+    int i = 0, B[3] = {0};
+    printf("Input string: ");
+    scanf("%s", A);
+
+    while (A[i] != '\0') {
+        if (A[i] == 'A') {
+            B[0]++;
+        } else if (A[i] == 'B') {
+            B[1]++;
+        } else {
+            B[2]++;
+        }
+        i++;
+    }
+    i=0;
     {
-    printf("%c:%d\n",'A'+i,A[i]);
+    printf("A:%d B:%d C:%d\n", B[0], B[1], B[2]);
     i++;
-	}
-    printf("A:%d B:%d C:%d\n",B[0],B[1],B[2]);
+    }
 }
 ```
 ===
@@ -183,74 +196,3 @@ main() {
 }
 ```
 ===
-
-
-
-
-
-
-
-
-
-
-
-DONT COPY BELOW, THANK YOU
-extra:
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-main() {
-    char A[20];
-    int i = 0, B[3] = {0};
-    printf("Input string: ");
-    scanf("%s", A);
-
-    while (A[i] != '\0') {
-        if (A[i] == 'A') {
-            B[0]++;
-        } else if (A[i] == 'B') {
-            B[1]++;
-        } else {
-            B[2]++;
-        }
-        i++;
-    }
-    i=0;
-    while(i<3)
-    {
-    printf("A:%d B:%d C:%d\n", B[0], B[1], B[2]);
-    i++;
-    }
-}
-```
-extra
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-main() {
-    char A[20];
-    int i = 0, B[3] = {0};
-    printf("Input string: ");
-    scanf("%s", A);
-
-    while (A[i] != '\0') {
-        if (A[i] == 'A') {
-            B[0]++;
-        } else if (A[i] == 'B') {
-            B[1]++;
-        } else {
-            B[2]++;
-        }
-        i++;
-    }
-    i=0;
-    while(i<3)
-    {
-    printf("%c:%d\n",'A'+i,A[i]);
-    i++;
-    }
-    printf("A:%d B:%d C:%d\n", B[0], B[1], B[2]);
-}
-```
