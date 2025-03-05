@@ -11,20 +11,15 @@ Just press the copy button >
 #include <stdlib.h>
 
 main() {
-    int i;
-    i=0;
-    while(i<5)
+    char A[5][10]={"APPLE","JOHN"};
+    char B[20]={"PETER"};
+    int i=0;
+    while(i<2)
     {
-    printf("i=%d\n",i);
+    printf("A[%d]: %s\n",i,A[i]);
     i++;
     }
-    printf("**i=%d\n",i);
-    i=0;
-    while(i<3)
-    {
-    printf("i=%d\n",i);
-    i++;
-    }
+    puts(B);
 }
 ```
 ===
@@ -35,20 +30,20 @@ main() {
 #include <stdlib.h>
 
 main() {
-    int i;
-    char c,A[10];
-    i=0;
-    while(i<5)
+    char A[]="ABCBBAACB";
+    int i=0;
+    int count_A=0,count_B=0,count_C=0;
+    while(A[i]!= '\0')
     {
-    printf("Input a char:");
-    scanf("%c",&A[i]);
+    if(A[i]=='A')
+        count_A++;
+    else if (A[i]=='B')
+        count_B++;
+    else
+        count_C++;
     i++;
-    while(i<5)
-    {
-    printf("%c\n",A[i]);
-    i++;
-        }
     }
+    printf("count_A: %d\ncount_B: %d\ncount_C: %d\n",count_A,count_B,count_C);
 }
 ```
 ===
@@ -60,21 +55,19 @@ main() {
 #include <stdlib.h>
 
 main() {
-    int i=0,length,j;
-    char A[10];
-    printf("Input a string:");
-    scanf("%s",A);
-    printf("%s\n",A);
-    while(A[i]!='\0')
-        i++;
-    printf("string length:%d\n",i);
-    length=i;
-    j=0;
-    while(j<length)
+    char A[]="ABCBBAACB";
+    int i=0, Length=0;
+    for(;;)
     {
-    printf("%c",A[j]);
-    j++;
+    if(A[i]!='\0')
+        {
+        Length++;
+        i++;
+        }
+        else
+            break;
     }
+    printf("Length:%d\n",Length);
 }
 ```
 ===
@@ -86,18 +79,19 @@ main() {
 #include <stdlib.h>
 
 main() {
-    int i;
-    char c,A[10];
-    i=0;
-    while(i<5)
+    char A[]="ABCBBAACB";
+    int i=0, Length=0;
+    int count_A=0,count_B=0,count_C=0;
+    for(i=0;i<Length;i++)
     {
-    printf("Input a char:");
-    scanf("%c",&A[i]);
-    fflush(stdin);
-    i++;
+    if(A[i]=='A')
+        count_A++;
+    else if (A[i]=='B')
+        count_B++;
+    else
+        count_C++;
     }
-    A[i]='\0';
-    printf("%s\n",A);
+    printf("count_A: %d\ncount_B: %d\ncount_C: %d\n",count_A,count_B,count_C);
 }
 ```
 ===
@@ -109,19 +103,20 @@ main() {
 #include <stdlib.h>
 
 main() {
-    int i;
-    char c,A[1000];
-    while(i>=0)
+    char A[20];
+    int i=0, B[5]={0};
+    printf("Input string:");
+    scanf("%s",A);
+    while(A[i]!='\0')
     {
-    printf("Input a char:");
-    scanf("%c",&c);
-    if(c=='9');
-        break;
-    A[i]=c;
-    i++;
+        if(A[i]=='A')
+            B[0]++;
+        else if (A[i]=='B')
+            B[1]++;
+        else
+            B[2]++;
+        i++;
     }
-    A[i]='\0';
-    printf("%s\n",A);
 }
 ```
 ===
@@ -129,24 +124,7 @@ main() {
 ===
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
-
-main() {
-    int i,j;
-    char c,A[100];
-    while(1)
-    {
-    printf("Input a char:");
-    scanf("%c",&c);
-    if(c=='9');
-        break;
-    A[i]=c;
-    i++;
-    }
-    A[i]='\0';
-    printf("%s\n",A);
-}
+ok
 ```
 ===
 7th
@@ -160,24 +138,5 @@ trabaho mamaya, yesss
 ===
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
-
-main() 
-{  
-    int i=0;
-    char c,A[100];
-    while((c=getchar())!='9') 
-    {  
-        A[i]=c;
-        i++;
-        if (i >= 99) {
-            break;
-        }
-    }
-
-    A[i] = '\0'; 
-    puts(A);  
-}
+ok
 ```
