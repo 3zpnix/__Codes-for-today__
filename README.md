@@ -124,7 +124,18 @@ main() {
 ===
 
 ```
-ok
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+    char A[20],B[5];
+    int i=0;
+    {
+    printf("%c:%d\n",'A'+i,A[i]);
+    i++;
+	}
+    printf("A:%d B:%d C:%d\n",B[0],B[1],B[2]);
+}
 ```
 ===
 7th
