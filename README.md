@@ -216,8 +216,12 @@ main() {
         }
         i++;
     }
-
+    i=0;
+    while(i<3)
+    {
     printf("A:%d B:%d C:%d\n", B[0], B[1], B[2]);
+    i++;
+    }
 }
 ```
 extra
