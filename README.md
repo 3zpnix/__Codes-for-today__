@@ -124,6 +124,13 @@ main() {
 ===
 
 ```
+
+```
+===
+7th
+===
+
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -138,16 +145,27 @@ main() {
 }
 ```
 ===
-7th
-===
-
-```
-trabaho mamaya, yesss
-```
-===
 8th 
 ===
 
 ```
-ok
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+    char A[5][20];
+    int i=0;
+    while(i<5)
+    {
+        printf("Input A[%d]:",i);
+        scanf("%s",A[i]);
+        i++;
+    }
+    i=0;
+    while(i<5)
+    {
+    puts(A[i]);
+    i++;
+    }
+}
 ```
