@@ -81,6 +81,27 @@ main() {
 main() {
     char A[]="ABCBBAACB";
     int i=0, Length=0;
+    for(;;)
+    {
+    if(A[Length]!='\0')
+        Length++;
+        else
+            break;
+	}
+	printf("Length:%d\n",Length);
+}
+```
+===
+5th
+===
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+main() {
+    char A[]="ABCBBAACB";
+    int i=0, Length=0;
     int count_A=0,count_B=0,count_C=0;
     for(i=0;i<Length;i++)
     {
@@ -95,9 +116,8 @@ main() {
 }
 ```
 ===
-5th
+6th 
 ===
-
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -118,13 +138,6 @@ main() {
         i++;
     }
 }
-```
-===
-6th 
-===
-
-```
-
 ```
 ===
 7th
