@@ -190,14 +190,13 @@ main()
     printf("Input integer: ");
     scanf("%d", &n);
     for(i = 0; i < n; i++) {
-        // Do something if needed, currently does nothing
     }
 
     printf("\nInput an integer: ");
     scanf("%d", &n);  
 
     printf("Input a char: ");
-    scanf(" %c", &c);  // Added space to consume any leftover newline
+    scanf(" %c", &c);  
     
     my_stars(c, n);
 
@@ -209,7 +208,7 @@ void my_stars(char c, int n) {
     for(i = 0; i < n; i++) {
         printf("%c", c);
     }
-    printf("\n");  // For better formatting
+    printf("\n");  
 }
 ```
 ===
