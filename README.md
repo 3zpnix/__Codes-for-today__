@@ -310,41 +310,6 @@ int main() {
 }
 ```
 
-#include <stdio.h>
-#include <stdlib.h>
-
-void my_stars(char, int);  
-
-int main() {
-    char A[20];
-    int i = 0, j, Len = 0, space;
-
-    printf("Input a string: ");
-    scanf("%s", A);
-
-    while (A[Len] != '\0')  
-        Len++;
-
-    while (i < Len) {
-        for (space = 0; space < Len - i - 1; space++) {
-            printf(" ");
-        }
-
-        
-        j = 0;
-        while (j <= i) {
-            printf("%c", A[j]);
-            j++; 
-        }
-
-        printf("\n");
-        i++;
-    }
-
-    return 0;
-}
-
-
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -370,4 +335,5 @@ main()
         i++;
     }
 }
+
 ```
