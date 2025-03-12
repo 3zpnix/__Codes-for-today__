@@ -239,3 +239,29 @@ main()
 	}
 }
 ```
+===
+10th (dont copy)
+===
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int add(int,int);
+void star();  
+main() 
+{
+    int sum,a=5,b=3;
+    sum=add(a,b); 
+    printf("%d+%d=%d\n",a,b,sum);
+    star();
+    
+    system("pause");
+	}
+	
+	int add(int num1,int num2)
+	{
+		int a;
+		a=num1+num2;
+		return a;
+	}
+```
