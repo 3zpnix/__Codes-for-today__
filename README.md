@@ -146,7 +146,7 @@ void my_stars(char x, int n) {
 }
 ```
 ===
-7th (UPDATED)
+7th 
 ===
 
 ```
@@ -269,11 +269,7 @@ main()
 	}
 ```
 ===
-```
-Diamond Codes Down Below
-```
-===
-11th
+11th (Testing code)
 ===
 ```
 #include <stdio.h>
@@ -311,7 +307,7 @@ int main() {
 }
 ```
 ===
-12th
+12th (Testing code)
 ===
 ```
 #include <stdio.h>
