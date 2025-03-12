@@ -1,7 +1,6 @@
-你好, Please refresh the page every time you want to copy a code, okay bye!
-If there are any mistakes/wrong placement of code, please do tell me so I will fix it right away, thanks!
+你好 - Please refresh the page every time you want to copy a code, okay bye! If there are any mistakes/wrong placement of code, please do tell me so I will fix it right away, thanks!
 ```
-Press the copy button >
+Quick Copy & Paste >
 ```
 ===
 1st 
