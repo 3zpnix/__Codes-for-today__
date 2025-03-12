@@ -144,7 +144,6 @@ void my_stars(char x, int n) {
         printf("%c", x);
         i++;
     }
-    printf("\n");  
 }
 ```
 ===
@@ -208,7 +207,6 @@ void my_stars(char c, int n) {
     for(i = 0; i < n; i++) {
         printf("%c", c);
     }
-    printf("\n");  
 }
 ```
 ===
