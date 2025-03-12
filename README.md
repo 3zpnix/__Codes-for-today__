@@ -210,3 +210,32 @@ void my_stars(char c, int n) {
 }
 ```
 ===
+9th 
+===
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+void my_stars(char, int);  
+
+main() 
+{
+    char A[20];
+    int i=0,j,Len=0;
+    printf("Input a string: ");
+    scanf("%s", &A);
+    while(A[Len]!='\0')
+    	Len++;
+	while(i<Len) 
+    {
+    	j=0;
+    	while(j<=i)
+		{
+			printf("%c",A[j]);
+			j++; 
+		}
+		printf("\n");
+		i++;
+	}
+}
+```
