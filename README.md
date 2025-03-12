@@ -155,6 +155,31 @@ void my_stars(char x, int n) {
 #include <stdio.h>
 #include <stdlib.h>
 
+void my_stars (char,int);
+main()
+{
+my_stars('*', 5);
+my_stars ('$', 10);
+my_stars('#', 7);
+}
+void my_stars (char c, int n)
+{
+int i=0;
+while(i<n)
+{
+printf("%c",c);
+i++;
+}
+}
+```
+===
+8th 
+===
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
 void my_stars(char, int);  
 
 main() 
@@ -185,31 +210,6 @@ void my_stars(char c, int n) {
         printf("%c", c);
     }
     printf("\n");  // For better formatting
-}
-```
-===
-8th 
-===
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-main() {
-    char A[5][20];
-    int i=0;
-    while(i<5)
-    {
-        printf("Input A[%d]:",i);
-        scanf("%s",A[i]);
-        i++;
-    }
-    i=0;
-    while(i<5)
-    {
-    puts(A[i]);
-    i++;
-    }
 }
 ```
 ===
