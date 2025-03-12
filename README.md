@@ -270,7 +270,7 @@ main()
 	}
 ```
 
-DONT COPY THIS IF YOU DONT WANT TO
+THIS BELOW IS A DRAFT CODE
 ===
 11th
 ===
