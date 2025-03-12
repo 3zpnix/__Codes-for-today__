@@ -240,7 +240,7 @@ main()
 }
 ```
 ===
-10th (dont copy)
+10th
 ===
 ```
 #include <stdio.h>
