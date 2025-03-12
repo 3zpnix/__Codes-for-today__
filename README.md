@@ -3,9 +3,7 @@
 ```
 Press the copy button >
 ```
-```
 If there are any errors/wrong placement of code, please do tell me so I will fix it right away, thanks!
-```
 ===
 1st 
 ===
