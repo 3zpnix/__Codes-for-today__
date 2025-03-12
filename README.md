@@ -10,17 +10,15 @@ Just press the copy button >
 #include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    char A[5][10]={"APPLE","JOHN"};
-    char B[20]={"PETER"};
-    int i=0;
-    while(i<2)
+int my_add(int,int);
+main() 
     {
-    printf("A[%d]: %s\n",i,A[i]);
-    i++;
+    printf("%d",my_add(2,3));
     }
-    puts(B);
-}
+    int my_add(int x, int y)
+    {
+        return(x+y);
+    }
 ```
 ===
 2nd 
@@ -29,22 +27,15 @@ main() {
 #include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    char A[]="ABCBBAACB";
-    int i=0;
-    int count_A=0,count_B=0,count_C=0;
-    while(A[i]!= '\0')
+int my_add(int x, int y)
     {
-    if(A[i]=='A')
-        count_A++;
-    else if (A[i]=='B')
-        count_B++;
-    else
-        count_C++;
-    i++;
+    return(x+y);
+    printf("%d",my_add(2,3));
     }
-    printf("count_A: %d\ncount_B: %d\ncount_C: %d\n",count_A,count_B,count_C);
-}
+    main()
+    {
+    printf("%d",my_add(2,3));
+    }
 ```
 ===
 3rd
@@ -54,20 +45,19 @@ main() {
 #include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    char A[]="ABCBBAACB";
-    int i=0, Length=0;
-    for(;;)
-    {
-    if(A[i]!='\0')
-        {
-        Length++;
-        i++;
-        }
-        else
-            break;
-    }
-    printf("Length:%d\n",Length);
+void stars();
+main()
+{
+stars();
+}
+void stars()
+{
+int i=0;
+while(i<10)
+{
+printf("*");
+i++;
+}
 }
 ```
 ===
@@ -78,17 +68,19 @@ main() {
 #include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    char A[]="ABCBBAACB";
-    int i=0, Length=0;
-    for(;;)
-    {
-    if(A[Length]!='\0')
-        Length++;
-        else
-            break;
-	}
-	printf("Length:%d\n",Length);
+void stars(int);
+main()
+{
+stars(10);
+}
+void stars(int n)
+{
+int i=0;
+while(i<n)
+{
+printf("*");
+i++;
+}
 }
 ```
 ===
@@ -97,22 +89,25 @@ main() {
 
 ```
 #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    char A[]="ABCBBAACB";
-    int i=0, Length=0;
-    int count_A=0,count_B=0,count_C=0;
-    for(i=0;i<Length;i++)
-    {
-    if(A[i]=='A')
-        count_A++;
-    else if (A[i]=='B')
-        count_B++;
-    else
-        count_C++;
-    }
-    printf("count_A: %d\ncount_B: %d\ncount_C: %d\n",count_A,count_B,count_C);
+void my_stars(int);
+main()
+{
+int n;
+printf("Input n:");
+scanf("%d",&n);
+my_stars(n);
+}
+void my_stars(int k)
+{
+int i=0;
+while(i<k)
+{
+printf("*");
+i++;
+}
 }
 ```
 ===
@@ -122,21 +117,34 @@ main() {
 #include <stdio.h>
 #include <stdlib.h>
 
+void my_stars(char, int);  
+
 main() {
-    char A[20];
-    int i=0, B[5]={0};
-    printf("Input string:");
-    scanf("%s",A);
-    while(A[i]!='\0')
-    {
-        if(A[i]=='A')
-            B[0]++;
-        else if (A[i]=='B')
-            B[1]++;
-        else
-            B[2]++;
+    char c;
+    int n;
+
+    printf("Input a char:");
+    scanf(" %c", &c);  
+    printf("Input a number:");
+    scanf("%d", &n);
+    my_stars(c, n);
+
+    printf("\nInput a char:");
+    scanf(" %c", &c);  
+    printf("Input a number:");
+    scanf("%d", &n);
+    my_stars(c, n);
+
+    return 0;
+}
+
+void my_stars(char x, int n) {
+    int i = 0;
+    while (i < n) {
+        printf("%c", x);
         i++;
     }
+    printf("\n");  
 }
 ```
 ===
@@ -147,27 +155,36 @@ main() {
 #include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    char A[20];
-    int i = 0, B[3] = {0};
-    printf("Input string: ");
-    scanf("%s", A);
+void my_stars(char, int);  
 
-    while (A[i] != '\0') {
-        if (A[i] == 'A') {
-            B[0]++;
-        } else if (A[i] == 'B') {
-            B[1]++;
-        } else {
-            B[2]++;
-        }
-        i++;
+main() 
+{
+    char c;
+    int i, n;
+
+    printf("Input integer: ");
+    scanf("%d", &n);
+    for(i = 0; i < n; i++) {
+        // Do something if needed, currently does nothing
     }
-    i=0;
-    {
-    printf("A:%d B:%d C:%d\n", B[0], B[1], B[2]);
-    i++;
+
+    printf("\nInput an integer: ");
+    scanf("%d", &n);  
+
+    printf("Input a char: ");
+    scanf(" %c", &c);  // Added space to consume any leftover newline
+    
+    my_stars(c, n);
+
+    return 0;
+}    
+
+void my_stars(char c, int n) {
+    int i;
+    for(i = 0; i < n; i++) {
+        printf("%c", c);
     }
+    printf("\n");  // For better formatting
 }
 ```
 ===
