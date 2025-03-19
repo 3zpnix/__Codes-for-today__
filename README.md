@@ -224,7 +224,7 @@ main()
 void my_print(char c,int m,int n)
 {
     int i;
-    for(i=m;i<n;i++)
+    for(i=0;i<n;i++)
         printf("%c",c);
 }
 ```
@@ -232,5 +232,17 @@ void my_print(char c,int m,int n)
 11th 
 ===
 ```
-
+#include <stdio.h>
+#include <stdlib.h>
+void my_print(char,int,int);
+main()
+{
+    my_print('@',10);
+}
+void my_print(char c,int m,int n)
+{
+    int i;
+    for(i=m;i<n;i++)
+        printf("%c",c);
+}
 ```
