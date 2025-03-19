@@ -112,7 +112,7 @@ void my_print(int A[],int n)
 }
 ```
 ===
-6th 
+6th (UPDATED)
 ===
 ```
 #include <stdio.h>
@@ -128,7 +128,6 @@ main()
     scanf("%d",&n);
     my_rand_i(B,m,n);
     my_print_i(B,0,10);
-    printf("\n");
 }
 void my_rand_i(int A[],int m,int n)
 {
@@ -139,7 +138,7 @@ void my_rand_i(int A[],int m,int n)
 void my_print_i(int A[],int m,int n)
 {
     int i;
-    for(i=0;i<n;i++)
+    for(i=m;i<n;i++)
     printf("B[%d]:%d\n",i,A[i]);
 }
 ```
