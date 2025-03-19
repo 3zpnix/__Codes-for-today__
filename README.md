@@ -228,7 +228,7 @@ void my_print(char c,int m,int n)
 void my_print(char,int,int);
 main()
 {
-    my_print('@',10);
+    my_print('@',2,10);
 }
 void my_print(char c,int m,int n)
 {
