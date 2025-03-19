@@ -127,34 +127,32 @@ void my_print(int A[],int n)
 ```
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
-void my_stars(char, int);  
-
-main() {
-    char c;
-    int n;
-
-    printf("Input a char:");
-    scanf(" %c", &c);  
-    printf("Input a number:");
-    scanf("%d", &n);
-    my_stars(c, n);
-
-    printf("\nInput a char:");
-    scanf(" %c", &c);  
-    printf("Input a number:");
-    scanf("%d", &n);
-    my_stars(c, n);
-
-    return 0;
+void my_rand_i(int A[],int,int);
+void my_print_i(int A[],int,int);
+main()
+{
+    int B[10],m,n;
+    printf("Input m: ");
+    scanf("%d",&m);
+    printf("Input n: ");
+    scanf("%d",&n);
+    my_rand_i(B,m,n);
+    my_print_i(B,0,10);
+    printf("\n");
 }
-
-void my_stars(char x, int n) {
-    int i = 0;
-    while (i < n) {
-        printf("%c", x);
-        i++;
-    }
+void my_rand_i(int A[],int m,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        A[i]=rand()%101;
+}
+void my_print_i(int A[],int m,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    printf("B[%d]:%d\n",i,A[i]);
 }
 ```
 ===
