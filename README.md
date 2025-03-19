@@ -28,16 +28,18 @@ for (i=0;i<n;i++)
 ```
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
-int my_add(int x, int y)
-    {
-    return(x+y);
-    printf("%d",my_add(2,3));
-    }
-    main()
-    {
-    printf("%d",my_add(2,3));
-    }
+void my_print(int n)
+{
+int i;
+for (i=0;i<n;i++)
+    printf("%d\n",i);
+}
+main()
+{
+my_print(5);
+}
 ```
 ===
 3rd
