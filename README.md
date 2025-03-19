@@ -44,7 +44,6 @@ my_print(5);
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
 int my_sum(int, int);
 main()
 {
@@ -184,14 +183,6 @@ void my_copy(int A[], int B[], int n)
 ===
 8th 
 ===
-
-```
-
-
-```
-===
-9th 
-===
 ```
 #include <stdio.h>
 #include <stdlib.h>
@@ -211,7 +202,7 @@ int my_sum(int a,int b)
 }
 ```
 ===
-10th
+9th
 ===
 ```
 #include <stdio.h>
@@ -229,7 +220,7 @@ void my_print(char c,int m,int n)
 }
 ```
 ===
-11th 
+10th 
 ===
 ```
 #include <stdio.h>
