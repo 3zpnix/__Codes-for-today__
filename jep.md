@@ -43,20 +43,20 @@ int my_add(int x, int y)
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
-int my_sum(int, int);
+void stars();
 main()
 {
-int x,i=2,j=5;
-x=my_sum(i,j);
-printf("x:%d\n",x);
+stars();
 }
-int my_sum(int a, int b)
+void stars()
 {
-int k;
-k=a+b;
-return k;
+int i=0;
+while(i<10)
+{
+printf("*");
+i++;
+}
 }
 ```
 ===
