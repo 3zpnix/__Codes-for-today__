@@ -71,20 +71,21 @@ i++;
 ```
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
-void stars(int);
+void print_stars();
 main()
 {
-stars(10);
+    print_stars();
+    printf("------\n");
+    print_stars();
 }
-void stars(int n)
+void print_stars()
 {
-int i=0;
-while(i<n)
-{
-printf("*");
-i++;
-}
+int i;
+for (i=0;i<10;i++)
+    printf("*");
+printf("\n");
 }
 ```
 ===
