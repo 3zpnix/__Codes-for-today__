@@ -8,16 +8,19 @@ Quick Copy & Paste >
 ```
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
-int my_add(int,int);
-main() 
-    {
-    printf("%d",my_add(2,3));
-    }
-    int my_add(int x, int y)
-    {
-        return(x+y);
-    }
+void my_print(int);
+main()
+{
+my_print(5);
+}
+void my_print(int n)
+{
+int i;
+for (i=0;i<n;i++)
+    printf("%d\n",i);
+}
 ```
 ===
 2nd 
