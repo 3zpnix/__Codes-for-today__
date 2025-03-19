@@ -94,25 +94,31 @@ printf("\n");
 
 ```
 #include <stdio.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 
-void my_stars(int);
+void my_rand(int A[],int);
+void my_print(int A[],int);
 main()
 {
-int n;
-printf("Input n:");
-scanf("%d",&n);
-my_stars(n);
+    int A[10],n;
+    printf("Input a digit: ");
+    scanf("%d",&n);
+    my_rand(A,n);
+    my_print(A,n);
+    printf("\n");
 }
-void my_stars(int k)
+void my_rand(int A[],int n)
 {
-int i=0;
-while(i<k)
-{
-printf("*");
-i++;
+    int i;
+    for(i=0;i<n;i++)
+        A[i]=rand()%101;
 }
+void my_print(int A[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    printf("A[%d]:%d\n",i,A[i]);
 }
 ```
 ===
