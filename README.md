@@ -8,8 +8,6 @@ Quick Copy & Paste >
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
 void my_print(int);
 main()
 {
@@ -28,8 +26,6 @@ for (i=0;i<n;i++)
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
 void my_print(int n)
 {
 int i;
@@ -48,7 +44,6 @@ my_print(5);
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
 void stars();
 main()
 {
@@ -71,8 +66,6 @@ i++;
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
 void print_stars();
 main()
 {
@@ -95,8 +88,6 @@ printf("\n");
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
 void my_rand(int A[],int);
 void my_print(int A[],int);
 main()
@@ -127,8 +118,6 @@ void my_print(int A[],int n)
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
 void my_rand_i(int A[],int,int);
 void my_print_i(int A[],int,int);
 main()
@@ -162,8 +151,6 @@ void my_print_i(int A[],int m,int n)
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-
 void my_rand(int A[],int);
 void my_print(int A[],int,char);
 void my_copy(int A[],int B[], int);
@@ -208,125 +195,30 @@ void my_copy(int A[], int B[], int n)
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-void my_stars(char, int);  
-
-main() 
+int my_sum(int,int);
+main()
 {
-    char A[20];
-    int i=0,j,Len=0;
-    printf("Input a string: ");
-    scanf("%s", &A);
-    while(A[Len]!='\0')
-    	Len++;
-	while(i<Len) 
-    {
-    	j=0;
-    	while(j<=i)
-		{
-			printf("%c",A[j]);
-			j++; 
-		}
-		printf("\n");
-		i++;
-	}
+    int i,m=1,n=5,sum;
+    sum=my_sum(m,n);
+    printf("sum=%d\n",sum);
+}
+int my_sum(int a,int b)
+{
+    int k=0,i;
+    for(i=a;i<b;i++)
+        k=k+i;
+    return k;
 }
 ```
 ===
 10th
 ===
 ```
-#include <stdio.h>
-#include <stdlib.h>
 
-int add(int,int);
-void star();  
-main() 
-{
-    int sum,a=5,b=3;
-    sum=add(a,b); 
-    printf("%d+%d=%d\n",a,b,sum);
-    star();
-    
-    system("pause");
-	}
-	
-	int add(int num1, int num2)
-	{
-		int a;
-		a=num1+num2;
-		return a;
-	}
-	
-	void star(){
-		printf("*****\n");
-	}
 ```
 ===
-11th (Testing code)
+11th 
 ===
 ```
-#include <stdio.h>
-#include <stdlib.h>
-
-void my_stars(char, int);  
-
-int main() {
-    char A[20];
-    int i = 0, j, Len = 0, space;
-
-    printf("Input a string: ");
-    scanf("%s", A);
-
-    while (A[Len] != '\0')  
-        Len++;
-
-    while (i < Len) {
-        for (space = 0; space < Len - i - 1; space++) {
-            printf(" ");
-        }
-
-        
-        j = 0;
-        while (j <= i) {
-            printf("%c", A[j]);
-            j++; 
-        }
-
-        printf("\n");
-        i++;
-    }
-
-    return 0;
-}
-```
-===
-12th (Testing code)
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-main() 
-{
-    char A[20];
-    int i = 0, j, Len = 0;
-
-    printf("Input a string: ");
-    scanf("%s", A);
-
-    while (A[Len] != '\0')  
-        Len++;
-
-    while (i <= Len / 2) {
-        printf("%*s", (Len / 2) - i, "");
-
-        for (j = (Len / 2) - i; j <= (Len / 2) + i && j < Len; j++) {
-            printf("%c", A[j]);
-        }
-
-        printf("\n");
-        i++;
-    }
-}
 
 ```
