@@ -23,6 +23,7 @@ main()
     my_print('A', A, m, n);
     my_print_1('A', A, m, n);
     my_copy(A, B, m, n);
+    my_print_1('B',B, m, n);
 }
 
 void my_rand(int A[][N], int m, int n)
