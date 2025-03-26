@@ -94,7 +94,81 @@ void my_copy(int A[][N], int B[][N], int m, int n)
 ===
 
 ```
-wo bu zhidao, send me pic
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define N 4
+void my_rand(int A[][N], int, int);
+void my_print(int, int A[][N], int, int);
+void my_print_1(int, int A[][N], int, int);
+void my_copy(int A[][N], int B[][N], int, int);
+
+main() 
+{
+    int m = 3, n = 4;
+    int A[3][N], B[3][N];
+
+    my_rand(A, m, n);
+    my_print('A', A, m, n);
+    my_print_1('A', A, m, n);
+    my_copy(A, B, m, n);
+}
+
+void my_rand(int A[][N], int m, int n)
+{
+    int i, j;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            A[i][j] = rand() % 101;  
+        }
+    }
+}
+
+void my_print(int c, int A[][N], int m, int n)
+{
+    int i, j;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%c[%d][%d]:%d\n", c, i, j, A[i][j]);
+    }
+    printf("\n");
+}
+
+void my_print_1(int c, int A[][N], int m, int n)
+{
+    int i = 0, j;
+    puts("A:");
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            printf("%4d", A[i][j]);  
+            j++;  
+        }
+        printf("\n");
+        i++;  
+    }
+}
+
+void my_copy(int A[][N], int B[][N], int m, int n)
+{
+    int i = 0, j;
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            B[i][j] = A[i][j];
+            j++;
+        }
+        i++;
+    }
+}
 ```
 ===
 3rd
