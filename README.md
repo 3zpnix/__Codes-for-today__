@@ -403,3 +403,83 @@ void find_max_min(int A[][N], int B[2], int m, int n)
     B[1] = min;
 }
 ```
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define N 4
+void my_rand(int A[][N], int, int);
+void my_print(char, int[][N], int, int);
+void my_print_1(char, int[][N], int, int);
+void my_copy(int[][N], int[][N], int, int);
+
+int main() 
+{
+    int m = 3, n = 4;
+    int A[3][N], B[3][N];
+
+    unsigned seed = (unsigned)time(NULL) ^ clock();
+    printf("Seed: %u\n", seed);
+    srand(seed);
+
+    my_rand(A, m, n);
+    my_print('A', A, m, n);
+    my_print_1('A', A, m, n);
+    my_copy(A, B, m, n);
+}
+
+void my_rand(int A[][N], int m, int n)
+{
+    int i, j;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            A[i][j] = rand() % 100;  
+        }
+    }
+}
+
+void my_print(char c, int A[][N], int m, int n)
+{
+    int i, j;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%c[%d][%d]: %d\n", c, i, j, A[i][j]);
+    }
+    printf("\n");
+}
+
+void my_print_1(char c, int A[][N], int m, int n)
+{
+    int i = 0, j;
+    printf("%c:\n", c);
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            printf("%4d", A[i][j]);  
+            j++;  
+        }
+        printf("\n");
+        i++;  
+    }
+}
+
+void my_copy(int A[][N], int B[][N], int m, int n)
+{
+    int i = 0, j;
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            B[i][j] = A[i][j];
+            j++;
+        }
+        i++;
+    }
+}
