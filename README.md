@@ -112,18 +112,18 @@ Wo bu zhidao, send me pic
 #include <time.h>
 
 #define N 4
-void my_rand(int A[][N], int, int);
-void my_print(char, int A[][N], int, int);
-void my_print_1(char, int A[][N], int, int);
-void my_copy(int A[][N], int B[][N], int, int);
+void my_rand(char A[][N], int, int);
+void my_print(char, char A[][N], int, int);
+void my_print_1(char, char A[][N], int, int);
+void my_copy(char A[][N], char B[][N], int, int);
 
-int p;
+char p;
 int k = 0;
 
 main() 
 {
     int m = 3, n = 4;
-    int A[3][N], B[3][N];
+    char A[3][N], B[3][N];
 
     my_rand(A, m, n);
     my_print('A', A, m, n);
@@ -131,19 +131,19 @@ main()
     my_copy(A, B, m, n);
 }
 
-void my_rand(int A[][N], int m, int n)
+void my_rand(char A[][N], int m, int n)
 {
     int i, j;
     for (i = 0; i < m; i++)
     {
         for (j = 0; j < n; j++)
         {
-            A[i][j] = rand() % 101;  
+            A[i][j] = 'A'+k;  
         }
     }
 }
 
-void my_print(char c, int A[][N], int m, int n)
+void my_print(char c, char A[][N], int m, int n)
 {
     int i, j;
     for (i = 0; i < m; i++)
@@ -154,7 +154,7 @@ void my_print(char c, int A[][N], int m, int n)
     printf("\n");
 }
 
-void my_print_1(char c, int A[][N], int m, int n)
+void my_print_1(char c, char A[][N], int m, int n)
 {
     int i = 0, j;
     puts("A:");
@@ -171,7 +171,7 @@ void my_print_1(char c, int A[][N], int m, int n)
     }
 }
 
-void my_copy(int A[][N], int B[][N], int m, int n)
+void my_copy(char A[][N], char B[][N], int m, int n)
 {
     int i = 0, j;
     while (i < m)
