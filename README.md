@@ -263,24 +263,26 @@ void my_copy(char A[][N], char B[][N], int m, int n)
 #include <time.h>
 
 #define N 4
-void my_rand(char A[][N], int, int);
-void my_print(char, char A[][N], int, int);
-void my_print_1(char, char A[][N], int, int);
-void my_copy(char A[][N], char B[][N], int, int);
+
+void my_rand(char A[][N], int m, int n);
+void my_print(char c, char A[][N], int m, int n);
+void my_print_1(char c, char A[][N], int m, int n);
+void my_copy(char A[][N], char B[][N], int m, int n);
 
 char p;
 int k = 0;
 
-main() 
+int main() 
 {
     int m = 3, n = 4;
     char A[3][N], B[3][N];
-    printf("Input a char:");
-    scanf("%c",&p);
+    printf("Input a char: ");
+    scanf(" %c", &p);
     my_rand(A, m, n);
     my_print('A', A, m, n);
     my_print_1('A', A, m, n);
     my_copy(A, B, m, n);
+    return 0;
 }
 
 void my_rand(char A[][N], int m, int n)
@@ -290,7 +292,7 @@ void my_rand(char A[][N], int m, int n)
     {
         for (j = 0; j < n; j++)
         {
-            A[i][j] = 'A'+k;  
+            A[i][j] = 'A' + (rand() % 26);
         }
     }
 }
@@ -301,7 +303,7 @@ void my_print(char c, char A[][N], int m, int n)
     for (i = 0; i < m; i++)
     {
         for (j = 0; j < n; j++)
-            printf("%c[%d][%d]:%d\n", c, i, j, A[i][j]);
+            printf("%c[%d][%d]: %c\n", c, i, j, A[i][j]);
     }
     printf("\n");
 }
@@ -309,13 +311,13 @@ void my_print(char c, char A[][N], int m, int n)
 void my_print_1(char c, char A[][N], int m, int n)
 {
     int i = 0, j;
-    puts("A:");
+    printf("%c:\n", c);
     while (i < m)
     {
         j = 0;
         while (j < n)
         {
-            printf("%4d", A[i][j]);  
+            printf("%4c", A[i][j]);  
             j++;  
         }
         printf("\n");
@@ -325,16 +327,13 @@ void my_print_1(char c, char A[][N], int m, int n)
 
 void my_copy(char A[][N], char B[][N], int m, int n)
 {
-    int i = 0, j;
-    while (i < m)
+    int i, j;
+    for (i = 0; i < m; i++)
     {
-        j = 0;
-        while (j < n)
+        for (j = 0; j < n; j++)
         {
             B[i][j] = A[i][j];
-            j++;
         }
-        i++;
     }
 }
 ```
