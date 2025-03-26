@@ -101,13 +101,6 @@ wo bu zhidao, send me pic
 ===
 
 ```
-Wo bu zhidao, send me pic
-```
-===
-4th 
-===
-
-```
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -186,6 +179,13 @@ void my_copy(char A[][N], char B[][N], int m, int n)
         i++;
     }
 }
+```
+===
+4th 
+===
+
+```
+
 ```
 ===
 5th
