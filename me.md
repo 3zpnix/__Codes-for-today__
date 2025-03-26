@@ -1,7 +1,6 @@
-你好, Please refresh the page every time you want to copy a code, okay bye!
-
+你好 - Please refresh the page every time you want to copy a code, okay bye! If there are any mistakes/wrong placement of code, please do tell me so I will fix it right away, thanks!
 ```
-Just press the copy button >
+Quick Copy & Paste >
 ```
 ===
 1st 
@@ -9,17 +8,16 @@ Just press the copy button >
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[5][10]={"APPLE","JOHN"};
-    char B[20]={"PETER"};
-    int i=0;
-    while(i<2)
-    {
-    printf("A[%d]: %s\n",i,A[i]);
-    i++;
-    }
-    puts(B);
+void my_print(int);
+main()
+{
+my_print(5);
+}
+void my_print(int n)
+{
+int i;
+for (i=0;i<n;i++)
+    printf("%d\n",i);
 }
 ```
 ===
@@ -28,22 +26,15 @@ main() {
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[]="ABCBBAACB";
-    int i=0;
-    int count_A=0,count_B=0,count_C=0;
-    while(A[i]!= '\0')
-    {
-    if(A[i]=='A')
-        count_A++;
-    else if (A[i]=='B')
-        count_B++;
-    else
-        count_C++;
-    i++;
-    }
-    printf("count_A: %d\ncount_B: %d\ncount_C: %d\n",count_A,count_B,count_C);
+void my_print(int n)
+{
+int i;
+for (i=0;i<n;i++)
+    printf("%d\n",i);
+}
+main()
+{
+my_print(5);
 }
 ```
 ===
@@ -53,21 +44,18 @@ main() {
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[]="ABCBBAACB";
-    int i=0, Length=0;
-    for(;;)
-    {
-    if(A[i]!='\0')
-        {
-        Length++;
-        i++;
-        }
-        else
-            break;
-    }
-    printf("Length:%d\n",Length);
+int my_sum(int, int);
+main()
+{
+int x,i=2,j=5;
+x=my_sum(i,j);
+printf("x:%d\n",x);
+}
+int my_sum(int a, int b)
+{
+int k;
+k=a+b;
+return k;
 }
 ```
 ===
@@ -77,18 +65,19 @@ main() {
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[]="ABCBBAACB";
-    int i=0, Length=0;
-    for(;;)
-    {
-    if(A[Length]!='\0')
-        Length++;
-        else
-            break;
-	}
-	printf("Length:%d\n",Length);
+void print_stars();
+main()
+{
+    print_stars();
+    printf("------\n");
+    print_stars();
+}
+void print_stars()
+{
+int i;
+for (i=0;i<10;i++)
+    printf("*");
+printf("\n");
 }
 ```
 ===
@@ -98,101 +87,152 @@ main() {
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[]="ABCBBAACB";
-    int i=0, Length=0;
-    int count_A=0,count_B=0,count_C=0;
-    for(i=0;i<Length;i++)
-    {
-    if(A[i]=='A')
-        count_A++;
-    else if (A[i]=='B')
-        count_B++;
-    else
-        count_C++;
-    }
-    printf("count_A: %d\ncount_B: %d\ncount_C: %d\n",count_A,count_B,count_C);
+void my_rand(int A[],int);
+void my_print(int A[],int);
+main()
+{
+    int A[10],n;
+    printf("Input a digit: ");
+    scanf("%d",&n);
+    my_rand(A,n);
+    my_print(A,n);
+    printf("\n");
+}
+void my_rand(int A[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        A[i]=rand()%101;
+}
+void my_print(int A[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    printf("A[%d]:%d\n",i,A[i]);
 }
 ```
 ===
-6th 
+6th (UPDATED)
 ===
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[20];
-    int i=0, B[5]={0};
-    printf("Input string:");
-    scanf("%s",A);
-    while(A[i]!='\0')
-    {
-        if(A[i]=='A')
-            B[0]++;
-        else if (A[i]=='B')
-            B[1]++;
-        else
-            B[2]++;
-        i++;
-    }
+void my_rand_i(int A[],int,int);
+void my_print_i(int A[],int,int);
+main()
+{
+    int B[10],m,n;
+    printf("Input m: ");
+    scanf("%d",&m);
+    printf("Input n: ");
+    scanf("%d",&n);
+    my_rand_i(B,m,n);
+    my_print_i(B,0,10);
+}
+void my_rand_i(int A[],int m,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        A[i]=rand()%101;
+}
+void my_print_i(int A[],int m,int n)
+{
+    int i;
+    for(i=m;i<n;i++)
+    printf("B[%d]:%d\n",i,A[i]);
 }
 ```
 ===
-7th (UPDATED)
+7th 
 ===
 
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[20];
-    int i = 0, B[3] = {0};
-    printf("Input string: ");
-    scanf("%s", A);
-
-    while (A[i] != '\0') {
-        if (A[i] == 'A') {
-            B[0]++;
-        } else if (A[i] == 'B') {
-            B[1]++;
-        } else {
-            B[2]++;
-        }
-        i++;
-    }
-    i=0;
-    {
-    printf("A:%d B:%d C:%d\n", B[0], B[1], B[2]);
-    i++;
-    }
+void my_rand(int A[],int);
+void my_print(int A[],int,char);
+void my_copy(int A[],int B[], int);
+main()
+{
+    int A[5],B[5];
+    my_rand(A,5);
+    my_print(A,5,'A');
+    my_copy(A,B,5);
+    my_print(B,5,'B');
+}
+void my_rand(int A[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        A[i]=rand()%101;
+}
+void my_print(int A[],int n,char c)
+{
+    int i;
+    for(i=0;i<n;i++)
+    printf("%c[%d]:%d\n",c,i,A[i]);
+}
+void my_copy(int A[], int B[], int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    B[i]=A[i];
 }
 ```
 ===
 8th 
 ===
-
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
-main() {
-    char A[5][20];
-    int i=0;
-    while(i<5)
-    {
-        printf("Input A[%d]:",i);
-        scanf("%s",A[i]);
-        i++;
-    }
-    i=0;
-    while(i<5)
-    {
-    puts(A[i]);
-    i++;
-    }
+int my_sum(int,int);
+main()
+{
+    int i,m=1,n=5,sum;
+    sum=my_sum(m,n);
+    printf("sum=%d\n",sum);
+}
+int my_sum(int a,int b)
+{
+    int k=0,i;
+    for(i=a;i<b;i++)
+        k=k+i;
+    return k;
 }
 ```
 ===
+9th
+===
+```
+#include <stdio.h>
+#include <stdlib.h>
+void my_print(char,int,int);
+main()
+{
+    my_print('#',2,10);
+}
+void my_print(char c,int m,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        printf("%c",c);
+}
+```
+===
+10th 
+===
+```
+#include <stdio.h>
+#include <stdlib.h>
+void my_print(char,int,int);
+main()
+{
+    my_print('@',2,10);
+}
+void my_print(char c,int m,int n)
+{
+    int i;
+    for(i=m;i<n;i++)
+        printf("%c",c);
+}
+```
