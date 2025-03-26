@@ -355,7 +355,7 @@ void find_max_min(int A[][N], int B[2], int, int);
 
 main() 
 {   
-    int A[3][N], B[2]; 
+    int A[3][4], B[2]; 
     srand((unsigned)time(NULL));
 
     my_rand(A, 3, N);
@@ -368,7 +368,7 @@ main()
     return 0;
 }
 
-void my_rand(int A[][N], int m, int n)
+void my_rand(int A[3][4], int m, int n)
 {
     int i, j;
     for (i = 0; i < m; i++)
@@ -376,7 +376,7 @@ void my_rand(int A[][N], int m, int n)
             A[i][j] = rand() % 101;  
 }
 
-void my_print(int A[][N], int m, int n)
+void my_print(int A[3][4], int m, int n)
 {
     int i, j;
     for (i = 0; i < m; i++)
@@ -388,7 +388,7 @@ void my_print(int A[][N], int m, int n)
     printf("\n");
 }
 
-void find_max_min(int A[][N], int B[2], int m, int n)
+void find_max_min(int A[3][4], int B[2], int m, int n)
 {
     int i, j, max = -1, min = 101;
     for (i = 0; i < m; i++)
