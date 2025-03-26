@@ -8,33 +8,84 @@ Quick Copy & Paste >
 ```
 #include <stdio.h>
 #include <stdlib.h>
-void my_print(int);
-main()
+#include <time.h>
+
+#define N 4
+void my_rand(int A[][N], int, int);
+void my_print(char, int A[][N], int, int);
+void my_print_1(char, int A[][N], int, int);
+void my_copy(int A[][N], int B[][N], int, int);
+
+main() 
 {
-my_print(5);
+    int A[3][N], B[3][N], m = 3, n = 4;
+    my_rand(A, m, n);
+    my_print('A', A, m, n);
+    my_print_1('A', A, m, n);
+    my_copy(A, B, m, n);
 }
-void my_print(int n)
+
+void my_rand(int A[][N], int m, int n)
 {
-int i;
-for (i=0;i<n;i++)
-    printf("%d\n",i);
+    int i = 0, j;
+    while (i < m)  
+    {
+        j = 0;  
+        while (j < n)
+        {
+            A[i][j] = rand() %101;  
+            j++;
+        }
+        i++;
+    }
 }
-```
-===
-2nd 
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-void my_print(int n)
+
+void my_print(char c, int A[][N], int m, int n)
 {
-int i;
-for (i=0;i<n;i++)
-    printf("%d\n",i);
+    int i = 0, j;
+    while (i < m)
+    {
+        j = 0;  
+        while (j < n)
+        {
+            printf("%c[%d][%d]:%d\n", c, i, j, A[i][j]);
+            j++;
+        }
+        i++;
+    }
+    printf("\n");  
 }
-main()
+
+void my_print_1(char c, int A[][N], int m, int n)
 {
-my_print(5);
+    int i = 0, j;
+    puts("A:");
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            printf("%4d", A[i][j]);
+            j++;
+        }
+        printf("\n");  
+        i++;
+    }
+}
+
+void my_copy(int A[][N], int B[][N], int m, int n)
+{
+    int i = 0, j;
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            B[i][j] = A[i][j];
+            j++;
+        }
+        i++;
+    }
 }
 ```
 ===
@@ -44,18 +95,81 @@ my_print(5);
 ```
 #include <stdio.h>
 #include <stdlib.h>
-int my_sum(int, int);
-main()
+#include <time.h>
+
+#define N 4
+void my_rand(int A[][N], int, int);
+void my_print(char, int A[][N], int, int);
+void my_print_1(char, int A[][N], int, int);
+void my_copy(int A[][N], int B[][N], int, int);
+
+int p;
+int k = 0;
+
+main() 
 {
-int x,i=2,j=5;
-x=my_sum(i,j);
-printf("x:%d\n",x);
+    int m = 3, n = 4;
+    int A[3][N], B[3][N];
+
+    my_rand(A, m, n);
+    my_print('A', A, m, n);
+    my_print_1('A', A, m, n);
+    my_copy(A, B, m, n);
 }
-int my_sum(int a, int b)
+
+void my_rand(int A[][N], int m, int n)
 {
-int k;
-k=a+b;
-return k;
+    int i, j;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            A[i][j] = rand() % 101;  
+        }
+    }
+}
+
+void my_print(char c, int A[][N], int m, int n)
+{
+    int i, j;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%c[%d][%d]:%d\n", c, i, j, A[i][j]);
+    }
+    printf("\n");
+}
+
+void my_print_1(char c, int A[][N], int m, int n)
+{
+    int i = 0, j;
+    puts("A:");
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            printf("%4d", A[i][j]);  
+            j++;  
+        }
+        printf("\n");
+        i++;  
+    }
+}
+
+void my_copy(int A[][N], int B[][N], int m, int n)
+{
+    int i = 0, j;
+    while (i < m)
+    {
+        j = 0;
+        while (j < n)
+        {
+            B[i][j] = A[i][j];
+            j++;
+        }
+        i++;
+    }
 }
 ```
 ===
@@ -63,22 +177,7 @@ return k;
 ===
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
-void print_stars();
-main()
-{
-    print_stars();
-    printf("------\n");
-    print_stars();
-}
-void print_stars()
-{
-int i;
-for (i=0;i<10;i++)
-    printf("*");
-printf("\n");
-}
+
 ```
 ===
 5th
@@ -87,152 +186,63 @@ printf("\n");
 ```
 #include <stdio.h>
 #include <stdlib.h>
-void my_rand(int A[],int);
-void my_print(int A[],int);
-main()
+#include <time.h>
+
+#define N 4
+
+void my_rand(int A[][N], int, int);
+void my_print(int A[][N], int, int);
+void find_max_min(int A[][N], int B[2], int, int);
+
+main() 
+{   
+    int A[3][N], B[2]; 
+    srand((unsigned)time(NULL));
+
+    my_rand(A, 3, N);
+    my_print(A, 3, N);
+    
+    find_max_min(A, B, 3, N);  
+
+    printf("max: %d min: %d\n\n", B[0], B[1]);
+
+    return 0;
+}
+
+void my_rand(int A[][N], int m, int n)
 {
-    int A[10],n;
-    printf("Input a digit: ");
-    scanf("%d",&n);
-    my_rand(A,n);
-    my_print(A,n);
+    int i, j;
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+            A[i][j] = rand() % 101;  
+}
+
+void my_print(int A[][N], int m, int n)
+{
+    int i, j;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%4d", A[i][j]);
+        printf("\n");
+    }
     printf("\n");
 }
-void my_rand(int A[],int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        A[i]=rand()%101;
-}
-void my_print(int A[],int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-    printf("A[%d]:%d\n",i,A[i]);
-}
-```
-===
-6th (UPDATED)
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-void my_rand_i(int A[],int,int);
-void my_print_i(int A[],int,int);
-main()
-{
-    int B[10],m,n;
-    printf("Input m: ");
-    scanf("%d",&m);
-    printf("Input n: ");
-    scanf("%d",&n);
-    my_rand_i(B,m,n);
-    my_print_i(B,0,10);
-}
-void my_rand_i(int A[],int m,int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        A[i]=rand()%101;
-}
-void my_print_i(int A[],int m,int n)
-{
-    int i;
-    for(i=m;i<n;i++)
-    printf("B[%d]:%d\n",i,A[i]);
-}
-```
-===
-7th 
-===
 
-```
-#include <stdio.h>
-#include <stdlib.h>
-void my_rand(int A[],int);
-void my_print(int A[],int,char);
-void my_copy(int A[],int B[], int);
-main()
+void find_max_min(int A[][N], int B[2], int m, int n)
 {
-    int A[5],B[5];
-    my_rand(A,5);
-    my_print(A,5,'A');
-    my_copy(A,B,5);
-    my_print(B,5,'B');
-}
-void my_rand(int A[],int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        A[i]=rand()%101;
-}
-void my_print(int A[],int n,char c)
-{
-    int i;
-    for(i=0;i<n;i++)
-    printf("%c[%d]:%d\n",c,i,A[i]);
-}
-void my_copy(int A[], int B[], int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-    B[i]=A[i];
-}
-```
-===
-8th 
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-int my_sum(int,int);
-main()
-{
-    int i,m=1,n=5,sum;
-    sum=my_sum(m,n);
-    printf("sum=%d\n",sum);
-}
-int my_sum(int a,int b)
-{
-    int k=0,i;
-    for(i=a;i<b;i++)
-        k=k+i;
-    return k;
-}
-```
-===
-9th
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-void my_print(char,int,int);
-main()
-{
-    my_print('#',2,10);
-}
-void my_print(char c,int m,int n)
-{
-    int i;
-    for(i=0;i<n;i++)
-        printf("%c",c);
-}
-```
-===
-10th 
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-void my_print(char,int,int);
-main()
-{
-    my_print('@',2,10);
-}
-void my_print(char c,int m,int n)
-{
-    int i;
-    for(i=m;i<n;i++)
-        printf("%c",c);
+    int i, j, max = -1, min = 101;
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (A[i][j] > max)
+                max = A[i][j];
+            if (A[i][j] < min)  
+                min = A[i][j];    
+        }
+    }
+    B[0] = max;
+    B[1] = min;
 }
 ```
