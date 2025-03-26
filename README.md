@@ -93,6 +93,13 @@ void my_copy(int A[][N], int B[][N], int m, int n)
 ===
 
 ```
+
+```
+===
+4th 
+===
+
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -171,13 +178,6 @@ void my_copy(int A[][N], int B[][N], int m, int n)
         i++;
     }
 }
-```
-===
-4th 
-===
-
-```
-
 ```
 ===
 5th
