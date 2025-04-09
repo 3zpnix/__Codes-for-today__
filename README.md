@@ -279,3 +279,9 @@ void my_input_output(char c, int A[], int n)
     my_output(c, A, n);    
 }
 ```
+
+===
+```
+9 lang po, tamad kasi ako sa number 10 hehehe
+```
+===
