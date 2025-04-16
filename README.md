@@ -9,13 +9,12 @@ TO COPY & PASTE >
 #include <stdio.h>
 #include <stdlib.h> 
 void my_input();
-void my_output(int,int,int);
 int a,b,c;
 main()
 {
 	int x;
 	my_input();
-	x=my_out(a,b,c);
+	x=my_output(a,b,c);
 	printf("result:%d\n",x);
 }
 void my_input()
