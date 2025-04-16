@@ -108,99 +108,17 @@ int my_max(int A[][5],int m, int n)
 ===
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
-void my_input ( int A[], int);
-void my_output( int A[], int);
-void my_input_output( int A[], int);
-main() 
-{
-    int A[50],B[50],C[50],n1,n2,n3;
-    printf("Input n1:");
-    scanf("%d", &n1);
-    printf("Input n2:");
-    scanf("%d", &n2);
-    printf("Input n3:");
-    scanf("%d", &n3);
-    my_input_output(A,n1);
-    my_input_output(B,n2);
-    my_input_output(C,n3);
-    }
-    void my_input(int A[], int n)
-    {
-    int i;
-    for(i=0;i<n;i++);
-    {
-    printf("Input A[%d]:",i);
-    scanf("%d", &A[i]);
-        }
-    }
-    void my_output(int A[], int n)
-    {
-    int i;
-    for(i=0;i<n;i++);
-        printf("A[%d]:%d\n", i,A[i]);
-    }
-    void my_input_output(int A[],int n)
-    {
-        my_input(A,n);
-        my_output(A,n);    
-}
+
 ```
 九 (9)
 ===
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
 
-void my_input(char c, int A[], int n);
-void my_output(char c, int A[], int n);
-void my_input_output(char c, int A[], int n);
-
-main() 
-{
-    int A[50], B[50], C[50], n1, n2, n3;
-    printf("Input n1: ");
-    scanf("%d", &n1);
-    printf("Input n2: ");
-    scanf("%d", &n2);
-    printf("Input n3: ");
-    scanf("%d", &n3);
-
-    my_input_output('A', A, n1);
-    my_input_output('B', B, n2);
-    my_input_output('C', C, n3);
-}
-
-void my_input(char c, int A[], int n)
-{
-    int i;
-    for (i = 0; i < n; i++)
-    {
-        printf("Input %c[%d]: ", c, i);
-        scanf("%d", &A[i]);
-    }
-}
-
-void my_output(char c, int A[], int n)
-{
-    int i;
-    for (i = 0; i < n; i++)
-    {
-        printf("%c[%d]: %d\n", c, i, A[i]);
-    }
-}
-
-void my_input_output(char c, int A[], int n)
-{
-    my_input(c, A, n);
-    my_output(c, A, n);    
-}
 ```
 
 ===
 ```
-9 lang po, tamad kasi ako sa number 10 hehehe
+uwu
 ```
 ===
