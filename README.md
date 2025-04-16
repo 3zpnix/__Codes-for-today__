@@ -36,7 +36,42 @@ int my_output(int x, int y, int z)
 ===
 
 ```
-
+#include <stdio.h>
+#include <stdlib.h> 
+void my_input(int A[][5]);
+void my_output(int A[][5]);
+void my_max(int A[][5], int, int);
+int A[3][5];
+main()
+{
+	my_input();
+	my_output();
+	printf("max:%d\n",my_max(A,3,5));
+}
+void my_input(int A[][5]);
+{
+	int m=3,n=5,i,j;
+	for(i=0;i<3;i++)
+		for(j=0;j<5;j++)
+			A[i][j]=rand()%101;
+}
+void my_output(int A[][5]);
+{
+	int m=3,n=5,i,j;
+	for(i=0;i<3;i++)
+		for(j=0;j<5;j++)
+			printf("%5d",A[i][j]);
+		printf("\n");
+}
+int my_max(int A[][5],int m, int n);
+{
+	int i,j,max=-1;
+	for(i=0;i<3;i++)
+		for(j=0;j<5;j++)
+		if(A[i][j]>max)
+			max=A[i][j];
+	return max;
+}
 ```
 三 (3)
 ===
