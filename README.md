@@ -287,23 +287,25 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main()
+
+main() 
 {
-    int i=0,A[100]={0},x,j;
-    while(1)
-    {
-        printf("Input A[%d]:");
-        scanf("%d",&x);
-        if(x>=0)
-        {
-            A[i]=x;
+    int i = 0, A[100] = {0}, x, j;
+
+    while (i < 100) { 
+        printf("Input A[%d]: ", i);
+        if (scanf("%d", &x) != 1) 
+        if (x >= 0) {
+            A[i] = x;
             i++;
-        }
-        else
+        } else {
             break;
+        }
     }
-    for(j=0;j<i;j++)
-        printf("A[%d]=%d\n",j,A[j]);
+
+    for (j = 0; j < i; j++) {
+        printf("A[%d] = %d\n", j, A[j]);
+    }
 }
 ```
 九 (end)
