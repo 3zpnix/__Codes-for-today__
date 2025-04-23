@@ -222,7 +222,7 @@ void my_add()
     int i;
     for (i = x; i <= y; i++)
     {
-        sum = x+y;
+        sum = sum+i;
     }
 }
 
@@ -260,7 +260,7 @@ void my_add()
     i=x;
     while(i<=y)
     {
-        sum = x+y;
+        sum = sum=i;
         i++;
     }
 }
