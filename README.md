@@ -9,8 +9,6 @@ TO COPY & PASTE >
 #include <stdio.h>
 #include <stdio.h>
 #include <stdlib.h> 
-#include <time.h> 
-
 int my_add(int, int);
 void my_input();
 void my_output();
@@ -52,8 +50,6 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h> 
-#include <time.h> 
-
 void my_add();
 void my_input();
 void my_output();
@@ -92,8 +88,6 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 int my_add(int, int);
 void my_input();
 void my_output(int, int, int);
@@ -132,8 +126,6 @@ void my_output(int a, int b, int c)
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 void my_add();
 void my_input();
 void my_output();
@@ -169,8 +161,6 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 void my_add();
 void my_input();
 void my_output();
@@ -206,7 +196,6 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
 void my_add();
 void my_input();
 void my_output();
@@ -248,7 +237,6 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
 void my_add();
 void my_input();
 void my_output();
@@ -287,7 +275,6 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
 main() 
 {
     int i = 0, A[100] = {0}, x, j;
