@@ -165,6 +165,7 @@ void my_output(int c)
 void my_add();
 void my_input();
 void my_output();
+
 int A[2], sum=0;
 main()
 {
@@ -181,12 +182,12 @@ void my_input()
     scanf("%d", &A[1]);
 }
 
-void my_add()
+void my_add(int a, int b)
 {
     sum= A[0] + A[1];
 }
 
-void my_output()
+void my_output(int a, int b, int c)
 {
     printf("%d + %d = %d\n", A[0], A[1], sum);
 }
