@@ -7,28 +7,43 @@ TO COPY & PASTE >
 ===
 ```
 #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h> 
+#include <time.h> 
+
+int my_add(int, int);
 void my_input();
-int a,b,c;
+void my_output();
+
+int x, y, sum = 0;
+
 main()
 {
-	int x;
-	my_input();
-	x=my_output(a,b,c);
-	printf("result:%d\n",x);
+    int z;
+    my_input();
+    z = my_add(x, y);
+    sum = z;  
+    my_output();
 }
+
 void my_input()
 {
-	printf("Input a:");
-	scanf("%d",&a);
-	printf("Input b:");
-	scanf("%d",&b);
-	printf("Input c:");
-	scanf("%d",&c);
+    printf("Input x:");
+    scanf("%d", &x);
+    printf("Input y:");
+    scanf("%d", &y);
 }
-int my_output(int x, int y, int z)
+
+int my_add(int a, int b)
 {
-	return(x*y*z);
+    int c;
+    c = a + b;
+    return c;
+}
+
+void my_output()
+{
+    printf("%d+%d=%d\n", x, y, sum);
 }
 ```
 二 (2)
@@ -38,65 +53,196 @@ int my_output(int x, int y, int z)
 #include <stdio.h>
 #include <stdlib.h> 
 #include <time.h> 
-void my_input(int A[][5]);
-void my_output(int A[][5]);
-int my_max(int A[][5], int, int);
-int A[3][5];
+
+void my_add();
+void my_input();
+void my_output();
+
+int x, y, sum = 0;
+
 main()
 {
-	int x;
-	my_input(A);
-	my_output(A);
-	printf("max:%d\n",my_max(A,3,5));
+    int z;
+    my_input();
+    my_add();
+    my_output();
 }
-void my_input(int A[][5])
+
+void my_input()
 {
-	int m=3,n=5,i,j;
-	for(i=0;i<3;i++)
-		for(j=0;j<5;j++)
-			A[i][j]=rand()%101;
+    printf("Input x:");
+    scanf("%d", &x);
+    printf("Input y:");
+    scanf("%d", &y);
 }
-void my_output(int A[][5])
+
+void my_add(int a, int b)
 {
-	int m=3,n=5,i,j;
-	for(i=0;i<3;i++)
-		for(j=0;j<5;j++)
-			printf("%5d",A[i][j]);
-		printf("\n");
+    sum = x + y;
 }
-int my_max(int A[][5],int m, int n)
+
+void my_output()
 {
-	int i,j,max=-1;
-	for(i=0;i<3;i++)
-		for(j=0;j<5;j++)
-			if(A[i][j]>max)
-				max=A[i][j];
-		return max;
+    printf("%d+%d=%d\n", x, y, sum);
 }
 ```
 三 (3)
 ===
 
 ```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+int my_add(int, int);
+void my_input();
+void my_output(int, int, int);
+int x, y;
+main()
+{
+    int sum = 0;
+    my_input();
+    sum = my_add(x, y);
+    my_output(x, y, sum);
+}
+
+void my_input()
+{
+    printf("Input x: ");
+    scanf("%d", &x);
+    printf("Input y: ");
+    scanf("%d", &y);
+}
+
+int my_add(int a, int b)
+{
+    int c;
+    c= a + b;
+    return c;
+}
+
+void my_output(int a, int b, int c)
+{
+    printf("%d + %d = %d\n", a, b, c);
+}
 ```
 四 (4)
 ===
 
 ```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+void my_add();
+void my_input();
+void my_output();
+int A[2], sum=0;
+main()
+{
+    my_input();
+    my_add();
+    my_output();
+}
+
+void my_input()
+{
+    printf("Input x: ");
+    scanf("%d", &A[0]);
+    printf("Input y: ");
+    scanf("%d", &A[1]);
+}
+
+void my_add()
+{
+    sum= A[0] + A[1];
+}
+
+void my_output()
+{
+    printf("%d + %d = %d\n", A[0], A[1], sum);
+}
 ```
 五 (5)
 ===
 
 ```
+#include <stdio.h>
+#include <stdlib.h>
 
+void my_add();
+void my_input();
+void my_output();
+
+int x, y, sum = 0;
+
+main()
+{
+    my_input();
+    my_add();
+    my_output();
+}
+
+void my_input()
+{
+    printf("Input x: ");
+    scanf("%d", &x);
+    printf("Input y: ");
+    scanf("%d", &y);
+}
+
+void my_add()
+{
+    int i;
+    for (i = x; i <= y; i++)
+    {
+        sum = x+y;
+    }
+}
+
+void my_output()
+{
+    printf("sum: %d\n", sum);
+}
 ```
 六 (6)
 ===
 
 ```
+#include <stdio.h>
+#include <stdlib.h>
 
+void my_add();
+void my_input();
+void my_output();
+int x, y, sum = 0;
+main()
+{
+    my_input();
+    my_add();
+    my_output();
+}
+void my_input()
+{
+    printf("Input x: ");
+    scanf("%d", &x);
+    printf("Input y: ");
+    scanf("%d", &y);
+}
+void my_add()
+{
+    int i;
+    i=x;
+    while(i<=y)
+    {
+        sum = x+y;
+        i++;
+    }
+}
+void my_output()
+{
+    printf("sum: %d\n", sum);
+}
 ```
 七 (7)
 ===
@@ -110,7 +256,7 @@ int my_max(int A[][5],int m, int n)
 ```
 
 ```
-九 (9)
+九 (end)
 ===
 
 ```
