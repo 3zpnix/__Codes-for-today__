@@ -147,9 +147,9 @@ main()
 
 void my_input()
 {
-    printf("Input x: ");
+    printf("Input A[0]: ");
     scanf("%d", &A[0]);
-    printf("Input y: ");
+    printf("Input A[1]: ");
     scanf("%d", &A[1]);
 }
 
