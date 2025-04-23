@@ -169,6 +169,43 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+void my_add();
+void my_input();
+void my_output();
+int A[2], sum=0;
+main()
+{
+    my_input();
+    my_add();
+    my_output();
+}
+
+void my_input()
+{
+    printf("Input x: ");
+    scanf("%d", &A[0]);
+    printf("Input y: ");
+    scanf("%d", &A[1]);
+}
+
+void my_add()
+{
+    sum= A[0] + A[1];
+}
+
+void my_output()
+{
+    printf("%d + %d = %d\n", A[0], A[1], sum);
+}
+```
+六 (6)
+===
+
+```
+#include <stdio.h>
+#include <stdlib.h>
 
 void my_add();
 void my_input();
@@ -205,7 +242,7 @@ void my_output()
     printf("sum: %d\n", sum);
 }
 ```
-六 (6)
+七 (7)
 ===
 
 ```
@@ -244,17 +281,30 @@ void my_output()
     printf("sum: %d\n", sum);
 }
 ```
-七 (7)
-===
-
-```
-
-```
 八 (8)
 ===
 
 ```
-
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i=0,A[100]={0},x,j;
+    while(1)
+    {
+        printf("Input A[%d]:");
+        scanf("%d",&x);
+        if(x>=0)
+        {
+            A[i]=x;
+            i++;
+        }
+        else
+            break;
+    }
+    for(j=0;j<i;j++)
+        printf("A[%d]=%d\n",j,A[j]);
+}
 ```
 九 (end)
 ===
