@@ -126,17 +126,16 @@ void my_output(int a, int b, int c)
 ```
 #include <stdio.h>
 #include <stdlib.h>
-void my_add();
+int my_add(int, int);
 void my_input();
 void my_output();
 int A[2], sum=0;
 main()
 {
     my_input();
-    my_add();
+    sum = my_add(A[0],A[1]);
     my_output();
 }
-
 void my_input()
 {
     printf("Input x: ");
@@ -145,12 +144,14 @@ void my_input()
     scanf("%d", &A[1]);
 }
 
-void my_add()
+int my_add(int a, int b)
 {
-    sum= A[0] + A[1];
+	int c;
+    c = A[0] + A[1];
+    return c;
 }
 
-void my_output()
+void my_output(int c)
 {
     printf("%d + %d = %d\n", A[0], A[1], sum);
 }
