@@ -275,13 +275,14 @@ void my_output()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main() 
-{
+main() {
     int i = 0, A[100] = {0}, x, j;
 
-    while (i < 100) { 
+    while (i < 100) {  
         printf("Input A[%d]: ", i);
-        if (scanf("%d", &x) != 1) 
+        if (scanf("%d", &x) != 1) {
+            break;
+        }
         if (x >= 0) {
             A[i] = x;
             i++;
