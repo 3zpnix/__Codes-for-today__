@@ -6,190 +6,131 @@ TO COPY & PASTE >
 一 (1)
 ===
 ```
+// C program to show function
+// call and definition
 #include <stdio.h>
-#include <stdio.h>
-#include <stdlib.h> 
-int my_add(int, int);
-void my_input();
-void my_output();
 
-int x, y, sum = 0;
-
-main()
-{
-    int z;
-    my_input();
-    z = my_add(x, y);
-    sum = z;  
-    my_output();
+// Function that takes two parameters 
+// a and b as inputs and returns 
+// their sum
+int sum(int a, int b) 
+{ 
+  return a + b; 
 }
 
-void my_input()
+// Driver code
+int main()
 {
-    printf("Input x:");
-    scanf("%d", &x);
-    printf("Input y:");
-    scanf("%d", &y);
-}
-
-int my_add(int a, int b)
-{
-    int c;
-    c = a + b;
-    return c;
-}
-
-void my_output()
-{
-    printf("%d+%d=%d\n", x, y, sum);
+  // Calling sum function and 
+  // storing its value in add variable
+  int add = sum(10, 30);
+  
+  printf("Sum is: %d", add);
+  return 0;
 }
 ```
 二 (2)
 ===
 
 ```
+// C program to implement
+// the above approach
+#include <math.h>
 #include <stdio.h>
-#include <stdlib.h> 
-void my_add();
-void my_input();
-void my_output();
 
-int x, y, sum = 0;
-
-main()
+// Driver code
+int main()
 {
-    int z;
-    my_input();
-    my_add();
-    my_output();
-}
+  double Number;
+  Number = 49;
 
-void my_input()
-{
-    printf("Input x:");
-    scanf("%d", &x);
-    printf("Input y:");
-    scanf("%d", &y);
-}
-
-void my_add(int a, int b)
-{
-    sum = x + y;
-}
-
-void my_output()
-{
-    printf("%d+%d=%d\n", x, y, sum);
+  // Computing the square root with 
+  // the help of predefined C 
+  // library function
+  double squareRoot = sqrt(Number);
+  
+  printf("The Square root of %.2lf = %.2lf", 
+          Number, squareRoot);
+  return 0;
 }
 ```
 三 (3)
 ===
 
 ```
+// C program to show 
+// user-defined functions
 #include <stdio.h>
-#include <stdlib.h>
-int my_add(int, int);
-void my_input();
-void my_output(int, int, int);
-int x, y;
-main()
-{
-    int sum = 0;
-    my_input();
-    sum = my_add(x, y);
-    my_output(x, y, sum);
+
+int sum(int a, int b) 
+{ 
+  return a + b; 
 }
 
-void my_input()
+// Driver code
+int main()
 {
-    printf("Input x: ");
-    scanf("%d", &x);
-    printf("Input y: ");
-    scanf("%d", &y);
-}
+  int a = 30, b = 40;
+ 
+  // function call
+  int res = sum(a, b);
 
-int my_add(int a, int b)
-{
-    int c;
-    c= a + b;
-    return c;
-}
-
-void my_output(int a, int b, int c)
-{
-    printf("%d + %d = %d\n", a, b, c);
+  printf("Sum is: %d", res);
+  return 0;
 }
 ```
 四 (4)
 ===
 
 ```
+// C program to show use 
+// of call by value
 #include <stdio.h>
-#include <stdlib.h>
-int my_add(int, int);
-void my_input();
-void my_output();
-int A[2], sum=0;
-main()
+
+void swap(int var1, int var2)
 {
-    my_input();
-    sum = my_add(A[0],A[1]);
-    my_output();
-}
-void my_input()
-{
-    printf("Input x: ");
-    scanf("%d", &A[0]);
-    printf("Input y: ");
-    scanf("%d", &A[1]);
+  int temp = var1;
+  var1 = var2;
+  var2 = temp;
 }
 
-int my_add(int a, int b)
+// Driver code
+int main()
 {
-	int c;
-    c = A[0] + A[1];
-    return c;
-}
-
-void my_output(int c)
-{
-    printf("%d + %d = %d\n", A[0], A[1], sum);
+  int var1 = 3, var2 = 2;
+  printf("Before swap Value of var1 and var2 is: %d, %d\n",
+          var1, var2);
+  swap(var1, var2);
+  printf("After swap Value of var1 and var2 is: %d, %d",
+          var1, var2);
+  return 0;
 }
 ```
 五 (5)
 ===
 
 ```
+// C program to show use of 
+// call by Reference
 #include <stdio.h>
-#include <stdlib.h>
-void my_add();
-void my_input();
-void my_output();
 
-int A[2], sum=0;
-main()
+void swap(int *var1, int *var2)
 {
-    my_input();
-    my_add();
-    my_output();
+  int temp = *var1;
+  *var1 = *var2;
+  *var2 = temp;
 }
 
-void my_input()
+// Driver code
+int main()
 {
-    printf("Input x: ");
-    scanf("%d", &A[0]);
-    printf("Input y: ");
-    scanf("%d", &A[1]);
-}
-
-void my_add(int a, int b)
-{
-    sum= A[0] + A[1];
-}
-
-void my_output(int a, int b, int c)
-{
-    printf("%d + %d = %d\n", A[0], A[1], sum);
+  int var1 = 3, var2 = 2;
+  printf("Before swap Value of var1 and var2 is: %d, %d\n",
+          var1, var2);
+  swap(&var1, &var2);
+  printf("After swap Value of var1 and var2 is: %d, %d",
+          var1, var2);
+  return 0;
 }
 ```
 六 (6)
@@ -197,40 +138,18 @@ void my_output(int a, int b, int c)
 
 ```
 #include <stdio.h>
-#include <stdlib.h>
-void my_add();
-void my_input();
-void my_output();
 
-int x, y, sum = 0;
-
-main()
+void rec(int n)
 {
-    my_input();
-    my_add();
-    my_output();
+    if(n == 6) return; 
+    printf("Recursion Level %d\n", n);
+    rec(n+1);
 }
 
-void my_input()
+int main()
 {
-    printf("Input x: ");
-    scanf("%d", &x);
-    printf("Input y: ");
-    scanf("%d", &y);
-}
-
-void my_add()
-{
-    int i;
-    for (i = x; i <= y; i++)
-    {
-        sum = sum+i;
-    }
-}
-
-void my_output()
-{
-    printf("sum: %d\n", sum);
+    rec(1);
+    return 0;
 }
 ```
 七 (7)
@@ -238,37 +157,18 @@ void my_output()
 
 ```
 #include <stdio.h>
-#include <stdlib.h>
-void my_add();
-void my_input();
-void my_output();
-int x, y, sum = 0;
-main()
+
+void rec(int n)
 {
-    my_input();
-    my_add();
-    my_output();
+    if(n == 0) return; 
+    printf("Recursion Level %d\n", n);
+    rec(n-1);
 }
-void my_input()
+
+int main()
 {
-    printf("Input x: ");
-    scanf("%d", &x);
-    printf("Input y: ");
-    scanf("%d", &y);
-}
-void my_add()
-{
-    int i;
-    i=x;
-    while(i<=y)
-    {
-        sum = sum=i;
-        i++;
-    }
-}
-void my_output()
-{
-    printf("sum: %d\n", sum);
+    rec(6);
+    return 0;
 }
 ```
 八 (8)
@@ -276,29 +176,22 @@ void my_output()
 
 ```
 #include <stdio.h>
-#include <stdlib.h>
-main() {
-    int i = 0, A[100] = {0}, x, j;
+int power(int n, int m)
+{
+    if(m == 0) return 1; 
+    
+    return n * power(n, m - 1);
+}
 
-    while (i < 100) {  
-        printf("Input A[%d]: ", i);
-        if (scanf("%d", &x) != 1) {
-            break;
-        }
-        if (x >= 0) {
-            A[i] = x;
-            i++;
-        } else {
-            break;
-        }
-    }
-
-    for (j = 0; j < i; j++) {
-        printf("A[%d] = %d\n", j, A[j]);
-    }
+int main()
+{
+    int n = 2, m = 3;
+    int result = power(n,m);
+    printf("%d raised to the power of %d is: %d\n", n, m, result);
+    return 0;
 }
 ```
-九 (end)
+九 (9)
 ===
 
 ```
