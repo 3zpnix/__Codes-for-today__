@@ -240,6 +240,6 @@ int main()
 
 ===
 ```
-cute si geoven uwu
+tulog tayo guys
 ```
 ===
