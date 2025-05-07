@@ -16,7 +16,6 @@ void gotoxy(int xpos, int ypos);
 main() 
 {
     int i = 0, j, k;
-
     gotoxy(15, 10);
     printf("gotoxy demo (press any key to continue)");
     getche(); 
