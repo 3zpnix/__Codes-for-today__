@@ -132,33 +132,3 @@ void gotoxy(int x, int y) {
 ang cute ni christian 🤭
 ```
 ===
-#include <stdio.h>
-#include <stdlib.h>
-#include <windows.h>
-#include <conio.h>
-
-void gotoxy(int xpos, int ypos); 
-
-main() 
-{
-    int i = 0, j, k;
-
-    gotoxy(15, 10);
-    printf("gotoxy demo (press any key to continue)");
-    getche(); 
-    system("cls");
-
-    gotoxy(20, 10);
-    printf("hello!");
-
-    while (1); 
-}
-
-void gotoxy(int xpos, int ypos)
-{
-    COORD scrn;
-    HANDLE hOutput = GetStdHandle(STD_OUTPUT_HANDLE); 
-    scrn.X = xpos;
-    scrn.Y = ypos;
-    SetConsoleCursorPosition(hOutput, scrn);
-}
