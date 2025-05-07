@@ -86,7 +86,7 @@ void gotoxy(int x, int y) {
 
 void gotoxy(int x, int y);
 
-int main() {
+main() {
     int x, y;
     char ch;
     
@@ -139,7 +139,7 @@ ang cute ni christian 🤭
 void gotoxy(int x, int y);
 
 main() {
-    int x = 10, y = 10;
+    int x = 54, y = 10;
     char ch;
 
     while (1) {
@@ -156,7 +156,7 @@ main() {
         else if (ch == 'q' || ch == 'Q') break;  // Quit
         else if (ch == 'c' || ch == 'C') {       // Reset to center
             system("cls")
-            x = 10;
+            x = 54;
             y = 10;
         }
     }
