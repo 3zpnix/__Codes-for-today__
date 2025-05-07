@@ -10,24 +10,31 @@ TO COPY & PASTE >
 #include <stdlib.h>
 #include <windows.h>
 #include <conio.h>
-void gotoxy(int xpos, int ypos);
-main()
+
+void gotoxy(int xpos, int ypos); 
+
+main() 
 {
-    int i=0,j,k;
-    gotoxy(15,10);
-    printf("gotoxydem(presskey to continue");
-    getche();
+    int i = 0, j, k;
+
+    gotoxy(15, 10);
+    printf("gotoxy demo (press any key to continue)");
+    getche(); 
     system("cls");
-    gotoxy(20,10);
+
+    gotoxy(20, 10);
     printf("hallo!");
-    while(1);
+
+    while (1); 
 }
+
 void gotoxy(int xpos, int ypos)
 {
     COORD scrn;
-    HANDLE hOuput = GetStdhandle(STD_OUTPUT_HANDLE);
-    scrn.X = xpos; scrn.Y = ypos;
-    SetConsoleCursorPosition(hOuput,scrn);
+    HANDLE hOutput = GetStdHandle(STD_OUTPUT_HANDLE); 
+    scrn.X = xpos;
+    scrn.Y = ypos;
+    SetConsoleCursorPosition(hOutput, scrn);
 }
 ```
 二 (2)
