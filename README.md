@@ -122,39 +122,8 @@ void gotoxy(int x, int y) {
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 ```
-四 (4)
-===
-
-```
-
-```
-五 (5)
-===
-
-```
-
-```
-六 (6)
-===
-
-```
-
-```
-八 (8)
-===
-
-```
-
-```
-九 (9)
-===
-
-```
-
-```
-
 ===
 ```
-tulog tayo guys
+ang cute ni christian
 ```
 ===
