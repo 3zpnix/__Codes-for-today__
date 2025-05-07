@@ -21,11 +21,9 @@ main()
     printf("gotoxy demo (press any key to continue)");
     getche(); 
     system("cls");
-
     gotoxy(20, 10);
     printf("hallo!");
-
-    while (1); 
+    while(1); 
 }
 
 void gotoxy(int xpos, int ypos)
