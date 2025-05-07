@@ -57,11 +57,15 @@ int main() {
         ch = getch(); 
 
         if (ch == 'w' || ch == 'W') y--;         // Move up
-        else if (ch == 's' || ch == 'S') y++;    // Move down
+        else if (ch == 'z' || ch == 'Z') y++;    // Move down
         else if (ch == 'a' || ch == 'A') x--;    // Move left
-        else if (ch == 'z' || ch == 'Z') x++;    // Move right
-        else if (ch == 'c' || ch == 'C') system("cls");  // Clear screen
+        else if (ch == 'd' || ch == 'D') x++;    // Move right
         else if (ch == 'q' || ch == 'Q') break;  // Quit
+        else if (ch == 'c' || ch == 'C') {  // Reset to center
+        system("cls");
+        x = columns / 2;
+        y = rows / 2;
+        }
     }
 
     return 0;
