@@ -63,8 +63,8 @@ int main() {
         else if (ch == 'q' || ch == 'Q') break;  // Quit
         else if (ch == 'c' || ch == 'C') {  // Reset to center
         system("cls");
-        x = columns / 2;
-        y = rows / 2;
+        x = 10;
+        y = 10;
         }
     }
 
