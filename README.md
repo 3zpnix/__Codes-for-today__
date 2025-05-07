@@ -45,7 +45,7 @@ void gotoxy(int xpos, int ypos)
 
 void gotoxy(int x, int y);
 
-int main() {
+main() {
     int x = 54, y = 10;
     char ch;
 
