@@ -75,7 +75,7 @@ void gotoxy(int x, int y) {
 }
 
 ```
-三 (3)
+三 (3) Depends on you if you want to copy
 ===
 
 ```
