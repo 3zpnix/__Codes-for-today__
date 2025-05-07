@@ -1,746 +1,245 @@
-你好 - Please refresh the page every time you want to copy a code, okay bye! If there are any mistakes/wrong placement of code, please do tell me so I will fix it right away, thanks!
+<h1>你好</h1> - Please refresh the page every time you want to copy a code, okay bye! If there are any mistakes/wrong placement of code, please do tell me so I will fix it right away, thanks!
+
 ```
-Quick Copy & Paste >
+TO COPY & PASTE >
 ```
+一 (1)
 ===
-1st 
+```
+// C program to show function
+// call and definition
+#include <stdio.h>
+
+// Function that takes two parameters 
+// a and b as inputs and returns 
+// their sum
+int sum(int a, int b) 
+{ 
+  return a + b; 
+}
+
+// Driver code
+int main()
+{
+  // Calling sum function and 
+  // storing its value in add variable
+  int add = sum(10, 30);
+  
+  printf("Sum is: %d", add);
+  return 0;
+}
+```
+二 (2)
 ===
+
+```
+// C program to implement
+// the above approach
+#include <math.h>
+#include <stdio.h>
+
+// Driver code
+int main()
+{
+  double Number;
+  Number = 49;
+
+  // Computing the square root with 
+  // the help of predefined C 
+  // library function
+  double squareRoot = sqrt(Number);
+  
+  printf("The Square root of %.2lf = %.2lf", 
+          Number, squareRoot);
+  return 0;
+}
+```
+三 (3)
+===
+
+```
+// C program to show 
+// user-defined functions
+#include <stdio.h>
+
+int sum(int a, int b) 
+{ 
+  return a + b; 
+}
+
+// Driver code
+int main()
+{
+  int a = 30, b = 40;
+ 
+  // function call
+  int res = sum(a, b);
+
+  printf("Sum is: %d", res);
+  return 0;
+}
+```
+四 (4)
+===
+
+```
+// C program to show use 
+// of call by value
+#include <stdio.h>
+
+void swap(int var1, int var2)
+{
+  int temp = var1;
+  var1 = var2;
+  var2 = temp;
+}
+
+// Driver code
+int main()
+{
+  int var1 = 3, var2 = 2;
+  printf("Before swap Value of var1 and var2 is: %d, %d\n",
+          var1, var2);
+  swap(var1, var2);
+  printf("After swap Value of var1 and var2 is: %d, %d",
+          var1, var2);
+  return 0;
+}
+```
+五 (5)
+===
+
+```
+// C program to show use of 
+// call by Reference
+#include <stdio.h>
+
+void swap(int *var1, int *var2)
+{
+  int temp = *var1;
+  *var1 = *var2;
+  *var2 = temp;
+}
+
+// Driver code
+int main()
+{
+  int var1 = 3, var2 = 2;
+  printf("Before swap Value of var1 and var2 is: %d, %d\n",
+          var1, var2);
+  swap(&var1, &var2);
+  printf("After swap Value of var1 and var2 is: %d, %d",
+          var1, var2);
+  return 0;
+}
+```
+六 (6)
+===
+
 ```
 #include <stdio.h>
-#include <stdlib.h>
 
-int my_add(int,int);
-main() 
-    {
-    printf("%d",my_add(2,3));
-    }
-    int my_add(int x, int y)
-    {
-        return(x+y);
-    }
-```
-===
-2nd 
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-int my_add(int x, int y)
-    {
-    return(x+y);
-    printf("%d",my_add(2,3));
-    }
-    main()
-    {
-    printf("%d",my_add(2,3));
-    }
-```
-===
-3rd
-===
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-void stars();
-main()
+void rec(int n)
 {
-stars();
+    if(n == 6) return; 
+    printf("Recursion Level %d\n", n);
+    rec(n+1);
 }
-void stars()
+
+int main()
 {
-int i=0;
-while(i<10)
-{
-printf("*");
-i++;
-}
-}
-```
-===
-4th 
-===
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-void stars(int);
-main()
-{
-stars(10);
-}
-void stars(int n)
-{
-int i=0;
-while(i<n)
-{
-printf("*");
-i++;
-}
-}
-```
-===
-5th
-===
-
-```
-#include <stdio.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-void my_stars(int);
-main()
-{
-int n;
-printf("Input n:");
-scanf("%d",&n);
-my_stars(n);
-}
-void my_stars(int k)
-{
-int i=0;
-while(i<k)
-{
-printf("*");
-i++;
-}
-}
-```
-===
-6th 
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-void my_stars(char, int);  
-
-main() {
-    char c;
-    int n;
-
-    printf("Input a char:");
-    scanf(" %c", &c);  
-    printf("Input a number:");
-    scanf("%d", &n);
-    my_stars(c, n);
-
-    printf("\nInput a char:");
-    scanf(" %c", &c);  
-    printf("Input a number:");
-    scanf("%d", &n);
-    my_stars(c, n);
-
+    rec(1);
     return 0;
 }
-
-void my_stars(char x, int n) {
-    int i = 0;
-    while (i < n) {
-        printf("%c", x);
-        i++;
-    }
-}
 ```
-===
-7th 
+七 (7)
 ===
 
 ```
 #include <stdio.h>
-#include <stdlib.h>
 
-void my_stars (char,int);
-main()
+void rec(int n)
 {
-my_stars('*', 5);
-my_stars ('$', 10);
-my_stars('#', 7);
+    if(n == 0) return; 
+    printf("Recursion Level %d\n", n);
+    rec(n-1);
 }
-void my_stars (char c, int n)
+
+int main()
 {
-int i=0;
-while(i<n)
-{
-printf("%c",c);
-i++;
-}
+    rec(6);
+    return 0;
 }
 ```
-===
-8th 
+八 (8)
 ===
 
 ```
 #include <stdio.h>
-#include <stdlib.h>
-
-void my_stars(char, int);  
-
-main() 
+int power(int n, int m)
 {
-    char c;
-    int i, n;
-
-    printf("Input integer: ");
-    scanf("%d", &n);
-    for(i = 0; i < n; i++) {
-    }
-
-    printf("\nInput an integer: ");
-    scanf("%d", &n);  
-
-    printf("Input a char: ");
-    scanf(" %c", &c);  
+    if(m == 0) return 1; 
     
-    my_stars(c, n);
-
-    return 0;
-}    
-
-void my_stars(char c, int n) {
-    int i;
-    for(i = 0; i < n; i++) {
-        printf("%c", c);
-    }
+    return n * power(n, m - 1);
 }
-```
-===
-9th 
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
 
-void my_stars(char, int);  
-
-main() 
+int main()
 {
-    char A[20];
-    int i=0,j,Len=0;
-    printf("Input a string: ");
-    scanf("%s", &A);
-    while(A[Len]!='\0')
-    	Len++;
-	while(i<Len) 
-    {
-    	j=0;
-    	while(j<=i)
-		{
-			printf("%c",A[j]);
-			j++; 
-		}
-		printf("\n");
-		i++;
-	}
-}
-```
-===
-10th
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-int add(int,int);
-void star();  
-main() 
-{
-    int sum,a=5,b=3;
-    sum=add(a,b); 
-    printf("%d+%d=%d\n",a,b,sum);
-    star();
-    
-    system("pause");
-	}
-	
-	int add(int num1, int num2)
-	{
-		int a;
-		a=num1+num2;
-		return a;
-	}
-	
-	void star(){
-		printf("*****\n");
-	}
-```
-===
-11th (Testing code)
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-void my_stars(char, int);  
-
-int main() {
-    char A[20];
-    int i = 0, j, Len = 0, space;
-
-    printf("Input a string: ");
-    scanf("%s", A);
-
-    while (A[Len] != '\0')  
-        Len++;
-
-    while (i < Len) {
-        for (space = 0; space < Len - i - 1; space++) {
-            printf(" ");
-        }
-
-        
-        j = 0;
-        while (j <= i) {
-            printf("%c", A[j]);
-            j++; 
-        }
-
-        printf("\n");
-        i++;
-    }
-
+    int n = 2, m = 3;
+    int result = power(n,m);
+    printf("%d raised to the power of %d is: %d\n", n, m, result);
     return 0;
 }
 ```
+九 (9)
 ===
-12th (Testing code)
-===
+
 ```
+// C program to find factorial of given number
 #include <stdio.h>
-#include <stdlib.h>
-main() 
+ 
+// ----- Recursion -----
+// method to find factorial of given number
+int factorialUsingRecursion(int n)
 {
-    char A[20];
-    int i = 0, j, Len = 0;
-
-    printf("Input a string: ");
-    scanf("%s", A);
-
-    while (A[Len] != '\0')  
-        Len++;
-
-    while (i <= Len / 2) {
-        printf("%*s", (Len / 2) - i, "");
-
-        for (j = (Len / 2) - i; j <= (Len / 2) + i && j < Len; j++) {
-            printf("%c", A[j]);
-        }
-
-        printf("\n");
-        i++;
-    }
+    if (n == 0)
+        return 1;
+ 
+    // recursion call
+    return n * factorialUsingRecursion(n - 1);
 }
-
-```
-
-你好 - Please refresh the page every time you want to copy a code, okay bye! If there are any mistakes/wrong placement of code, please do tell me so I will fix it right away, thanks!
-```
-Quick Copy & Paste >
-```
-===
-1st 
-===
-```
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define N 4
-void my_rand(int A[][N], int, int);
-void my_print(char, int A[][N], int, int);
-void my_print_1(char, int A[][N], int, int);
-void my_copy(int A[][N], int B[][N], int, int);
-
-main() 
+ 
+// ----- Iteration -----
+// Method to find the factorial of a given number
+int factorialUsingIteration(int n)
 {
-    int A[3][N], B[3][N], m = 3, n = 4;
-    my_rand(A, m, n);
-    my_print('A', A, m, n);
-    my_print_1('A', A, m, n);
-    my_copy(A, B, m, n);
-    my_print_1('B',B, m, n);
+    int res = 1, i;
+ 
+    // using iteration
+    for (i = 2; i <= n; i++)
+        res *= i;
+ 
+    return res;
 }
-
-void my_rand(int A[][N], int m, int n)
+ 
+// Driver method
+int main()
 {
-    int i = 0, j;
-    while (i < m)  
-    {
-        j = 0;  
-        while (j < n)
-        {
-            A[i][j] = rand() %101;  
-            j++;
-        }
-        i++;
-    }
-}
-
-void my_print(char c, int A[][N], int m, int n)
-{
-    int i = 0, j;
-    while (i < m)
-    {
-        j = 0;  
-        while (j < n)
-        {
-            printf("%c[%d][%d]:%d\n", c, i, j, A[i][j]);
-            j++;
-        }
-        i++;
-    }
-    printf("\n");  
-}
-
-void my_print_1(char c, int A[][N], int m, int n)
-{
-    int i = 0, j;
-    puts("A:");
-    while (i < m)
-    {
-        j = 0;
-        while (j < n)
-        {
-            printf("%4d", A[i][j]);
-            j++;
-        }
-        printf("\n");  
-        i++;
-    }
-}
-
-void my_copy(int A[][N], int B[][N], int m, int n)
-{
-    int i = 0, j;
-    while (i < m)
-    {
-        j = 0;
-        while (j < n)
-        {
-            B[i][j] = A[i][j];
-            j++;
-        }
-        i++;
-    }
-}
-```
-===
-2nd
-===
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define N 4
-void my_rand(int A[][N], int, int);
-void my_print(int, int A[][N], int, int);
-void my_print_1(int, int A[][N], int, int);
-void my_copy(int A[][N], int B[][N], int, int);
-
-main() 
-{
-    int m = 3, n = 4;
-    int A[3][N], B[3][N];
-
-    my_rand(A, m, n);
-    my_print('A', A, m, n);
-    my_print_1('A', A, m, n);
-    my_copy(A, B, m, n);
-}
-
-void my_rand(int A[][N], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            A[i][j] = rand() % 101;  
-        }
-    }
-}
-
-void my_print(int c, int A[][N], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-            printf("%c[%d][%d]:%d\n", c, i, j, A[i][j]);
-    }
-    printf("\n");
-}
-
-void my_print_1(int c, int A[][N], int m, int n)
-{
-    int i = 0, j;
-    puts("A:");
-    while (i < m)
-    {
-        j = 0;
-        while (j < n)
-        {
-            printf("%4d", A[i][j]);  
-            j++;  
-        }
-        printf("\n");
-        i++;  
-    }
-}
-
-void my_copy(int A[][N], int B[][N], int m, int n)
-{
-    int i = 0, j;
-    while (i < m)
-    {
-        j = 0;
-        while (j < n)
-        {
-            B[i][j] = A[i][j];
-            j++;
-        }
-        i++;
-    }
-}
-```
-===
-3rd
-===
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define N 4
-void my_rand(int A[][N], int, int);
-void my_print(char, int[][N], int, int);
-void my_print_1(char, int[][N], int, int);
-void my_copy(int[][N], int[][N], int, int);
-
-int k=0; 
-
-main() 
-{
-    int m = 3, n = 4;
-    int A[3][N], B[3][N];
-
-    srand((unsigned)time(NULL));
-    my_rand(A, m, n);
-    my_print('A', A, m, n);
-    my_print_1('A', A, m, n);
-    my_copy(A, B, m, n);
-}
-
-void my_rand(int A[][N], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            A[i][j] = rand() % 100;  
-        }
-    }
-}
-
-void my_print(char c, int A[][N], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-            printf("%c[%d][%d]: %d\n", c, i, j, A[i][j]);
-    }
-    printf("\n");
-}
-
-void my_print_1(char c, int A[][N], int m, int n)
-{
-    int i = 0, j;
-    printf("%c:\n", c);
-    while (i < m)
-    {
-        j = 0;
-        while (j < n)
-        {
-            printf("%4d", A[i][j]);  
-            j++;  
-        }
-        printf("\n");
-        i++;  
-    }
-}
-
-void my_copy(int A[][N], int B[][N], int m, int n)
-{
-    int i = 0, j;
-    while (i < m)
-    {
-        j = 0;
-        while (j < n)
-        {
-            B[i][j] = A[i][j];
-            j++;
-        }
-        i++;
-    }
-}
-```
-===
-4th 
-===
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define N 4
-
-void my_rand(char A[][N], int m, int n);
-void my_print(char c, char A[][N], int m, int n);
-void my_print_1(char c, char A[][N], int m, int n);
-void my_copy(char A[][N], char B[][N], int m, int n);
-
-char p;
-int k = 0;
-
-int main() 
-{
-    int m = 3, n = 4;
-    char A[3][N], B[3][N];
-    printf("Input a char: ");
-    scanf(" %c", &p);
-    my_rand(A, m, n);
-    my_print('A', A, m, n);
-    my_print_1('A', A, m, n);
-    my_copy(A, B, m, n);
+    int num = 5;
+    printf("Factorial of %d using Recursion is: %d\n", num,
+           factorialUsingRecursion(5));
+ 
+    printf("Factorial of %d using Iteration is: %d", num,
+           factorialUsingIteration(5));
+ 
     return 0;
 }
+ 
+// This code is contributed by mits
+```
 
-void my_rand(char A[][N], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            A[i][j] = 'A' + (rand() % 26);
-        }
-    }
-}
-
-void my_print(char c, char A[][N], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-            printf("%c[%d][%d]: %c\n", c, i, j, A[i][j]);
-    }
-    printf("\n");
-}
-
-void my_print_1(char c, char A[][N], int m, int n)
-{
-    int i = 0, j;
-    printf("%c:\n", c);
-    while (i < m)
-    {
-        j = 0;
-        while (j < n)
-        {
-            printf("%4c", A[i][j]);  
-            j++;  
-        }
-        printf("\n");
-        i++;  
-    }
-}
-
-void my_copy(char A[][N], char B[][N], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            B[i][j] = A[i][j];
-        }
-    }
-}
+===
+```
+tulog tayo guys
 ```
 ===
-5th
-===
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define N 4
-
-void my_rand(int A[][N], int, int);
-void my_print(int A[][N], int, int);
-void find_max_min(int A[][N], int B[2], int, int);
-
-main() 
-{   
-    int A[3][4], B[2]; 
-    srand((unsigned)time(NULL));
-
-    my_rand(A, 3, N);
-    my_print(A, 3, N);
-    
-    find_max_min(A, B, 3, N);  
-
-    printf("max: %d min: %d\n\n", B[0], B[1]);
-
-    return 0;
-}
-
-void my_rand(int A[3][4], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-        for (j = 0; j < n; j++)
-            A[i][j] = rand() % 101;  
-}
-
-void my_print(int A[3][4], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-            printf("%4d", A[i][j]);
-        printf("\n");
-    }
-    printf("\n");
-}
-
-void find_max_min(int A[3][4], int B[2], int m, int n)
-{
-    int i, j, max = -1, min = 101;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            if (A[i][j] > max)
-                max = A[i][j];
-            if (A[i][j] < min)  
-                min = A[i][j];    
-        }
-    }
-    B[0] = max;
-    B[1] = min;
-}
-```
