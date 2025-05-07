@@ -116,7 +116,6 @@ main() {
         system("cls");
         x = columns / 2;
         y = rows / 2;
-}
         }
     }
 
