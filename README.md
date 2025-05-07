@@ -97,7 +97,6 @@ int main() {
     columns = csbi.srWindow.Right - csbi.srWindow.Left + 1;
     rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
 
-    // Start in the middle
     x = columns / 2;
     y = rows / 2;
 
@@ -106,7 +105,7 @@ int main() {
         gotoxy(x, y);
         printf("*");
 
-        ch = getch();  // Get key without Enter
+        ch = getch();  
 
         if (ch == 'w' || ch == 'W') y--;
         else if (ch == 's' || ch == 'S') y++;
