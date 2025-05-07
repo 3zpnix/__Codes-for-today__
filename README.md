@@ -124,6 +124,6 @@ void gotoxy(int x, int y) {
 ```
 ===
 ```
-ang cute ni christian
+ang cute ni christian 🤭
 ```
 ===
