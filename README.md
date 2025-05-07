@@ -6,236 +6,151 @@ TO COPY & PASTE >
 一 (1)
 ===
 ```
-// C program to show function
-// call and definition
 #include <stdio.h>
-
-// Function that takes two parameters 
-// a and b as inputs and returns 
-// their sum
-int sum(int a, int b) 
-{ 
-  return a + b; 
-}
-
-// Driver code
-int main()
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+void gotoxy(int xpos, int ypos);
+main()
 {
-  // Calling sum function and 
-  // storing its value in add variable
-  int add = sum(10, 30);
-  
-  printf("Sum is: %d", add);
-  return 0;
+    int i=0,j,k;
+    gotoxy(15,10);
+    printf("gotoxydem(presskey to continue");
+    getche();
+    system("cls");
+    gotoxy(20,10);
+    printf("hallo!");
+    while(1);
+}
+void gotoxy(int xpos, int ypos)
+{
+    COORD scrn;
+    HANDLE hOuput = GetStdhandle(STD_OUTPUT_HANDLE);
+    scrn.X = xpos; scrn.Y = ypos;
+    SetConsoleCursorPosition(hOuput,scrn);
 }
 ```
 二 (2)
 ===
 
 ```
-// C program to implement
-// the above approach
-#include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
 
-// Driver code
-int main()
-{
-  double Number;
-  Number = 49;
+void gotoxy(int x, int y);
 
-  // Computing the square root with 
-  // the help of predefined C 
-  // library function
-  double squareRoot = sqrt(Number);
-  
-  printf("The Square root of %.2lf = %.2lf", 
-          Number, squareRoot);
-  return 0;
+int main() {
+    int x = 10, y = 10;
+    char ch;
+
+    while (1) {
+        system("cls");
+        gotoxy(x, y);
+        printf("*");
+
+        ch = getch(); 
+
+        if (ch == 'w' || ch == 'W') y--;         // Move up
+        else if (ch == 's' || ch == 'S') y++;    // Move down
+        else if (ch == 'a' || ch == 'A') x--;    // Move left
+        else if (ch == 'z' || ch == 'Z') x++;    // Move right
+        else if (ch == 'c' || ch == 'C') system("cls");  // Clear screen
+        else if (ch == 'q' || ch == 'Q') break;  // Quit
+    }
+
+    return 0;
 }
+
+void gotoxy(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
 ```
 三 (3)
 ===
 
 ```
-// C program to show 
-// user-defined functions
 #include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
 
-int sum(int a, int b) 
-{ 
-  return a + b; 
+void gotoxy(int x, int y);
+
+int main() {
+    int x, y;
+    char ch;
+    
+    // Get console window size
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    int columns, rows;
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+    columns = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+    rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+
+    // Start in the middle
+    x = columns / 2;
+    y = rows / 2;
+
+    while (1) {
+        system("cls");
+        gotoxy(x, y);
+        printf("*");
+
+        ch = getch();  // Get key without Enter
+
+        if (ch == 'w' || ch == 'W') y--;
+        else if (ch == 's' || ch == 'S') y++;
+        else if (ch == 'a' || ch == 'A') x--;
+        else if (ch == 'z' || ch == 'Z') x++;
+        else if (ch == 'c' || ch == 'C') system("cls");
+        else if (ch == 'q' || ch == 'Q') break;
+    }
+
+    return 0;
 }
 
-// Driver code
-int main()
-{
-  int a = 30, b = 40;
- 
-  // function call
-  int res = sum(a, b);
-
-  printf("Sum is: %d", res);
-  return 0;
+void gotoxy(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 ```
 四 (4)
 ===
 
 ```
-// C program to show use 
-// of call by value
-#include <stdio.h>
 
-void swap(int var1, int var2)
-{
-  int temp = var1;
-  var1 = var2;
-  var2 = temp;
-}
-
-// Driver code
-int main()
-{
-  int var1 = 3, var2 = 2;
-  printf("Before swap Value of var1 and var2 is: %d, %d\n",
-          var1, var2);
-  swap(var1, var2);
-  printf("After swap Value of var1 and var2 is: %d, %d",
-          var1, var2);
-  return 0;
-}
 ```
 五 (5)
 ===
 
 ```
-// C program to show use of 
-// call by Reference
-#include <stdio.h>
 
-void swap(int *var1, int *var2)
-{
-  int temp = *var1;
-  *var1 = *var2;
-  *var2 = temp;
-}
-
-// Driver code
-int main()
-{
-  int var1 = 3, var2 = 2;
-  printf("Before swap Value of var1 and var2 is: %d, %d\n",
-          var1, var2);
-  swap(&var1, &var2);
-  printf("After swap Value of var1 and var2 is: %d, %d",
-          var1, var2);
-  return 0;
-}
 ```
 六 (6)
 ===
 
 ```
-#include <stdio.h>
 
-void rec(int n)
-{
-    if(n == 6) return; 
-    printf("Recursion Level %d\n", n);
-    rec(n+1);
-}
-
-int main()
-{
-    rec(1);
-    return 0;
-}
-```
-七 (7)
-===
-
-```
-#include <stdio.h>
-
-void rec(int n)
-{
-    if(n == 0) return; 
-    printf("Recursion Level %d\n", n);
-    rec(n-1);
-}
-
-int main()
-{
-    rec(6);
-    return 0;
-}
 ```
 八 (8)
 ===
 
 ```
-#include <stdio.h>
-int power(int n, int m)
-{
-    if(m == 0) return 1; 
-    
-    return n * power(n, m - 1);
-}
 
-int main()
-{
-    int n = 2, m = 3;
-    int result = power(n,m);
-    printf("%d raised to the power of %d is: %d\n", n, m, result);
-    return 0;
-}
 ```
 九 (9)
 ===
 
 ```
-// C program to find factorial of given number
-#include <stdio.h>
- 
-// ----- Recursion -----
-// method to find factorial of given number
-int factorialUsingRecursion(int n)
-{
-    if (n == 0)
-        return 1;
- 
-    // recursion call
-    return n * factorialUsingRecursion(n - 1);
-}
- 
-// ----- Iteration -----
-// Method to find the factorial of a given number
-int factorialUsingIteration(int n)
-{
-    int res = 1, i;
- 
-    // using iteration
-    for (i = 2; i <= n; i++)
-        res *= i;
- 
-    return res;
-}
- 
-// Driver method
-int main()
-{
-    int num = 5;
-    printf("Factorial of %d using Recursion is: %d\n", num,
-           factorialUsingRecursion(5));
- 
-    printf("Factorial of %d using Iteration is: %d", num,
-           factorialUsingIteration(5));
- 
-    return 0;
-}
- 
-// This code is contributed by mits
+
 ```
 
 ===
