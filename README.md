@@ -35,17 +35,17 @@ main()
 main() 
 {
     char y = 0x80; 
-    while (y) 
+    while (y > 0) 
     {
-        for (char mask = 0x80; mask != 0; mask >>= 1) 
+        for (int i = 7; i >= 0; i--) 
         {
-            if (y & mask)
+            if (y == (1 << i))
                 printf("1");
             else
                 printf("0");
         }
         printf("\n");
-        y >>= 1;
+        y = y >> 1;
     }
 }
 ```
