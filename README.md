@@ -37,7 +37,7 @@ main()
     char y = 0x80; 
     while (y) 
     {
-        for (unsigned char mask = 0x80; mask != 0; mask >>= 1) 
+        for (char mask = 0x80; mask != 0; mask >>= 1) 
         {
             if (y & mask)
                 printf("1");
