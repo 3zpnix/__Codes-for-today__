@@ -39,10 +39,22 @@ main()
 #include <stdlib.h>
 main() 
 {
-    int x, y = 0x80,i=0;
+    int x, y = 0x80;
     printf("Input x: ");
     scanf("%d", &x); 
 
+    while (y) 
+    {
+        if (x & y)
+            printf("1");
+        else
+            printf("0");
+        y = y >> 1;
+    }
+    printf("\n");
+    
+    x=~x;
+    y=0x80;
     while (y) 
     {
         if (x & y)
