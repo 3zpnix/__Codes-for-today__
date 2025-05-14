@@ -12,7 +12,6 @@ main()
 {
     char x;
     char y;
-    
     for (x = 0; x <= 31; x++) 
     {  
         y = 0x80; 
@@ -56,11 +55,9 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-
 main() 
 {
     char x, y = 0x80,i=0;
-
     printf("Input x: ");
     scanf("%d", &x); 
 
@@ -78,13 +75,13 @@ main()
 ```
 四 (4)
 ===
+```
 #include <stdio.h>
-
+#include <stdlib.h>
 main()
 {
     char x;
     int i = 0;
-
     while (i <= 255) 
     {
         char y = 0x80; 
