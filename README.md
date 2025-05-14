@@ -61,48 +61,45 @@ main()
 #include <stdlib.h>
 main() 
 {
-    int x, y = 0x80,i=0;
-    printf("Input x: ");
-    scanf("%d", &x); 
-
-    while (y) 
+    int y = 0x01; 
+    int i;  
+    while (y <= 0x80) 
     {
-        if (x & y)
-            printf("1");
-        else
-            printf("0");
-        y = y >> 1;
+        for (i = 0; i < 8; i++) 
+        {
+            if (y == (1 << i))
+                printf("1");
+            else
+                printf("0");
+        }
+        printf("\n");
+        y = y << 1;
     }
-    printf("\n");
+    return 0;
 }
-
 ```
 四 (4)
 ===
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main()
+main() 
 {
-    int x;
-    int i = 0;
-    while (i <= 255) 
+    int y = 0x80;  
+    int i;  
+    while (y > 0) 
     {
-        char y = 0x80; 
-        printf("Input x: ");
-        scanf("%d", &x); 
-
-        while (y) 
+        for (i = 0; i < 8; i++)  
         {
-            if (x & y)
+            if (y == (1 << i))
                 printf("1");
             else
                 printf("0");
-            y = y >> 1;
         }
         printf("\n");
-        i++;
+        y = y >> 1; 
     }
+    return 0;
 }
 ```
 ===
