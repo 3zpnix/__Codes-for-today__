@@ -10,22 +10,20 @@ ATTENTION TO COPY & PASTE >
 #include <stdlib.h>
 main() 
 {
-    int x;
+    int x, i;
     printf("Input x: ");
     scanf("%d", &x);
-
-    for (int i = x; i <= 255; i++) 
+    for (i = x; i <= 255; i++) 
     {
-        int y = 0x80;  
-        while (y) 
-        {
+        int y = 0x80;
+
+        while (y) {
             if (i & y)
                 printf("1");
             else
                 printf("0");
             y = y >> 1;
         }
-
         printf("\n");
     }
 }
