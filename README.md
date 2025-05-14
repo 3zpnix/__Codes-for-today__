@@ -8,16 +8,15 @@ ATTENTION TO COPY & PASTE >
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main()
+main() 
 {
     int x;
-    int i = 0;
     printf("Input x: ");
-    scanf("%d", &x); 
-    while (i <= 255)  
-    {
-        char y = 0x80;
+    scanf("%d", &x);
 
+    for (int i = x; i <= 255; i++) 
+    {
+        int y = 0x80;  
         while (y) 
         {
             if (i & y)
@@ -28,7 +27,6 @@ main()
         }
 
         printf("\n");
-        i++;
     }
 }
 ```
