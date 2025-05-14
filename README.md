@@ -40,21 +40,21 @@ main()
 #include <stdlib.h>
 main() 
 {
-    int y = 0x80;  
-    int i;  
-    while (y > 0) 
+    int x, y = 0x80,i=0;
+    printf("Input x: ");
+    scanf("%d", &x); 
+
+    while (y) 
     {
-        for (i = 7; i >= 0; i--) 
-        {
-            if (y == (1 << i))
-                printf("1");
-            else
-                printf("0");
-        }
-        printf("\n");
+        if (x & y)
+            printf("1");
+        else
+            printf("0");
         y = y >> 1;
     }
+    printf("\n");
 }
+
 ```
 三 (3) 
 ===
