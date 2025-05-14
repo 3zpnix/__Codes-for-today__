@@ -61,7 +61,7 @@ main()
 #include <stdlib.h>
 main() 
 {
-    char x, y = 0x80,i=0;
+    int x, y = 0x80,i=0;
     printf("Input x: ");
     scanf("%d", &x); 
 
@@ -84,7 +84,7 @@ main()
 #include <stdlib.h>
 main()
 {
-    char x;
+    int x;
     int i = 0;
     while (i <= 255) 
     {
