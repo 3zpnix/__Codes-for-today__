@@ -10,13 +10,12 @@ ATTENTION TO COPY & PASTE >
 #include <stdlib.h>
 main() 
 {
-    unsigned char x;
-    unsigned char y;
-
+    int x;
+    int y;
     for (x = 0; x <= 31; x++) 
     {  
-        y = 0x80;
-        while (y) 
+        y = 0x80;  
+        while (y > 0) 
         {
             if (x & y)
                 printf("1");
@@ -26,6 +25,8 @@ main()
         }
         printf("\n");
     }
+
+    return 0;
 }
 ```
 二 (2)
