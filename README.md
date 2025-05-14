@@ -8,25 +8,28 @@ ATTENTION TO COPY & PASTE >
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main() 
+main()
 {
     int x;
-    int y;
-    for (x = 0; x <= 31; x++) 
-    {  
-        y = 0x80;  
-        while (y > 0) 
+    int i = 0;
+    printf("Input x: ");
+    scanf("%d", &x); 
+    while (i <= 255)  
+    {
+        char y = 0x80;
+
+        while (y) 
         {
-            if (x & y)
+            if (i & y)
                 printf("1");
             else
                 printf("0");
-            y >>= 1; 
+            y = y >> 1;
         }
-        printf("\n");
-    }
 
-    return 0;
+        printf("\n");
+        i++;
+    }
 }
 ```
 二 (2)
