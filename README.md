@@ -33,6 +33,29 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
+main() 
+{
+    char y = 0x80; 
+    while (y) 
+    {
+        for (unsigned char mask = 0x80; mask != 0; mask >>= 1) 
+        {
+            if (y & mask)
+                printf("1");
+            else
+                printf("0");
+        }
+        printf("\n");
+        y >>= 1;
+    }
+}
+```
+三 (3) 
+===
+
+```
+#include <stdio.h>
+#include <stdlib.h>
 
 main() 
 {
@@ -53,10 +76,8 @@ main()
 }
 
 ```
-三 (3) 
+四 (4)
 ===
-
-```
 #include <stdio.h>
 
 main()
@@ -82,10 +103,8 @@ main()
         i++;
     }
 }
-
 ```
 ===
-```
 sarap daw ng tae sabi ni geoven 🤭
 ```
 ===
