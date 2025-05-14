@@ -12,9 +12,10 @@ main()
 {
     char x;
     char y;
+
     for (x = 0; x <= 31; x++) 
     {  
-        y = 0x80;
+        y = 0x80;  
         while (y) 
         {
             if (x & y)
