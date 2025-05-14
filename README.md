@@ -6,6 +6,12 @@ TO COPY & PASTE >
 一 (1)
 ===
 ```
+
+```
+二 (2)
+===
+
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -26,19 +32,37 @@ main()
     }
     printf("\n");
 }
-```
-二 (2)
-===
-
-```
-
 
 ```
 三 (3) 
 ===
 
 ```
+#include <stdio.h>
 
+main()
+{
+    char x;
+    int i = 0;
+
+    while (i <= 255) 
+    {
+        char y = 0x80; 
+        printf("Input x: ");
+        scanf("%d", &x); 
+
+        while (y) 
+        {
+            if (x & y)
+                printf("1");
+            else
+                printf("0");
+            y = y >> 1;
+        }
+        printf("\n");
+        i++;
+    }
+}
 
 ```
 ===
