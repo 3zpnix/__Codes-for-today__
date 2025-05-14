@@ -37,9 +37,10 @@ main()
 main() 
 {
     char y = 0x80; 
+    int i;  
     while (y > 0) 
     {
-        for (int i = 7; i >= 0; i--) 
+        for (i = 7; i >= 0; i--) 
         {
             if (y == (1 << i))
                 printf("1");
