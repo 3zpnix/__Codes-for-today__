@@ -37,7 +37,7 @@ main()
 #include <stdlib.h>
 main() 
 {
-    char y = 0x80; 
+    int y = 0x80;  
     int i;  
     while (y > 0) 
     {
