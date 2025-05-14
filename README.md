@@ -6,7 +6,26 @@ TO COPY & PASTE >
 一 (1)
 ===
 ```
-
+#include <stdio.h>
+#include <stdlib.h>
+main() 
+{
+    char x;
+    char y;
+    
+    for (x = 0; x <= 31; x++) 
+    {  
+        y = 0x80; 
+        while (y) {
+            if (x & y)
+                printf("1");
+            else
+                printf("0");
+            y = y >> 1;
+        }
+        printf("\n");
+    }
+}
 ```
 二 (2)
 ===
