@@ -10,23 +10,25 @@ ATTENTION TO COPY & PASTE >
 #include <stdlib.h>
 main() 
 {
-    int x;
+    int i = 0;
     int y;
-    for (x = 0; x <= 31; x++) 
-    {  
-        y = 0x80;  
-        while (y > 0) 
+    while (i <= 255) 
+    {
+        if (i <= 31) 
         {
-            if (x & y)
-                printf("1");
-            else
-                printf("0");
-            y >>= 1; 
+            y = 0x80; 
+            while (y > 0) 
+            {
+                if (i & y)
+                    printf("1");
+                else
+                    printf("0");
+                y >>= 1;
+            }
+            printf("\n");
         }
-        printf("\n");
+        i++;
     }
-
-    return 0;
 }
 ```
 二 (2)
