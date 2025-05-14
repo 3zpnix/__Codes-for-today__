@@ -10,12 +10,12 @@ ATTENTION TO COPY & PASTE >
 #include <stdlib.h>
 main() 
 {
-    char x;
-    char y;
+    unsigned char x;
+    unsigned char y;
 
     for (x = 0; x <= 31; x++) 
     {  
-        y = 0x80;  
+        y = 0x80;
         while (y) 
         {
             if (x & y)
