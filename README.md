@@ -67,9 +67,8 @@ main()
     for(j=0;j<256;j++)
     {
         for(k=128;k;k>>=1)
-        printf(k&i?"1":"0");
+        printf(k&j?"1":"0");
     printf("\n");
-    j++;
     }
 }
 ```
