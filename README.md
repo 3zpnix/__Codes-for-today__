@@ -60,71 +60,55 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main() 
+void print_binary(int x);
+int get_hex_H(int);
+int get_hex_L(int);
+
+main()  
 {
-    int y = 0x01; 
-    int i;  
-    while (y <= 0x80) 
+    int x;
+    printf("Input x:");
+    scanf("%x", &x);
+    printf("x's Hex: %X \n", x);
+    print_binary(x);
+    printf("\n");
+    printf("X's H: %2X\n", get_hex_H(x));
+    printf("X's L: %2X\n", get_hex_L(x));
+}
+
+void print_binary(int x)
+{
+    int y = 0x80;
+    while (y)
     {
-        for (i = 0; i < 8; i++) 
-        {
-            if (y == (1 << i))
-                printf("1");
-            else
-                printf("0");
-        }
-        printf("\n");
-        y = y << 1;
+        if (x & y)
+            printf("1");
+        else
+            printf("0");  
+        y = y >> 1;
     }
-    return 0;
+}
+
+int get_hex_H(int x)
+{
+    return (x >> 8) & 0xFF;  
+}
+
+int get_hex_L(int x)
+{
+    return x & 0xFF;      
 }
 ```
 四 (4)
 ===
 ```
-#include <stdio.h>
-#include <stdlib.h>
-main() 
-{
-    int y = 0x80;  
-    int i;  
-    while (y > 0) 
-    {
-        for (i = 0; i < 8; i++)  
-        {
-            if (y == (1 << i))
-                printf("1");
-            else
-                printf("0");
-        }
-        printf("\n");
-        y = y >> 1; 
-    }
-    return 0;
-}
+
 ```
 五 (5)
 ===
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
-main() 
-{
-    int x, y = 0x80;
-    printf("Input x: ");
-    scanf("%d", &x); 
 
-    while (y) 
-    {
-        if (x & y)
-            printf("1");
-        else
-            printf("0");
-        y = y >> 1;
-    }
-    printf("\n");
-}
 
 ```
 ===
