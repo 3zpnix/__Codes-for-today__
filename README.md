@@ -10,24 +10,21 @@ ATTENTION TO COPY & PASTE >
 #include <stdlib.h>
 main() 
 {
-    int i = 0;
-    int y;
-    while (i <= 255) 
+    int i,j,k;
+    j=0;
+    while (j<256) 
     {
-        if (i <= 31) 
+        k=0x80;
+        while(k)
         {
-            y = 0x80; 
-            while (y > 0) 
-            {
-                if (i & y)
-                    printf("1");
-                else
-                    printf("0");
-                y >>= 1;
-            }
-            printf("\n");
+            if (k & j)
+                printf("1");
+            else
+                printf("0");
+        k = k >> 1;
         }
-        i++;
+    printf("\n");
+    j++;
     }
 }
 ```
@@ -39,33 +36,23 @@ main()
 #include <stdlib.h>
 main() 
 {
-    int x, y = 0x80;
-    printf("Input x: ");
-    scanf("%d", &x); 
-
-    while (y) 
+    int i,j,k;
+    j=0;
+    for(j=0;j<256;j++)
     {
-        if (x & y)
-            printf("1");
-        else
-            printf("0");
-        y = y >> 1;
-    }
+        k=128;
+        for(i=0;i<8;i++)
+        {
+            if (k & j)
+                printf("1");
+            else
+                printf("0");
+        k = k >> 1;
+        }
     printf("\n");
-    
-    x=~x;
-    y=0x80;
-    while (y) 
-    {
-        if (x & y)
-            printf("1");
-        else
-            printf("0");
-        y = y >> 1;
+    j++;
     }
-    printf("\n");
 }
-
 ```
 三 (3) 
 ===
