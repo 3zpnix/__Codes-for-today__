@@ -60,6 +60,24 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
+main() 
+{
+    int i,j,k;
+    j=0;
+    for(j=0;j<256;j++)
+    {
+        for(k=128;k;k>>=1)
+        printf(k&i?"1":"0");
+    printf("\n");
+    j++;
+    }
+}
+```
+四 (4)
+===
+```
+#include <stdio.h>
+#include <stdlib.h>
 void print_binary(int x);
 int get_hex_H(int);
 int get_hex_L(int);
@@ -98,11 +116,6 @@ int get_hex_L(int x)
 {
     return x & 0xFF;      
 }
-```
-四 (4)
-===
-```
-
 ```
 五 (5)
 ===
