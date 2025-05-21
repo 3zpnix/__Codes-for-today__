@@ -105,16 +105,17 @@ void print_binary(int x)
         y = y >> 1;
     }
 }
-
 int get_hex_H(int x)
 {
-    return (x >> 8) & 0xFF;  
+    int k=0xf0,y;
+    y=(x&k)>>4;
+    return y;
 }
-
 int get_hex_L(int x)
 {
-    return x & 0xFF;      
-}
+    int k=0x0f;
+    return (x&k);
+}            
 ```
 五 (5)
 ===
