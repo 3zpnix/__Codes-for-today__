@@ -149,7 +149,6 @@ main()
 
     while (1) {
         clrscr();
-        gotoxy(posX, posY);
         printf("%04d", number);
 
         ch = getch();
