@@ -7,11 +7,8 @@ void clrscr() {
     system("cls");
 }
 
-void gotoxy(int x, int y) {
+void gotoxy(int x) {
     int i;
-    for (i = 0; i < y; i++) {
-        printf("\n");
-    }
     for (i = 0; i < x; i++) {
         printf(" ");
     }
@@ -21,6 +18,9 @@ int main() {
     int i, k[5];
     srand(1234);
 
+    for (i = 0; i < 5; i++)  // print 5 newlines once to go down to line 5
+        printf("\n");
+
     for (i = 0; i < 100000; i++) {
         k[0] = rand() % 9000 + 1000;
         k[1] = k[0] / 1000;
@@ -29,7 +29,12 @@ int main() {
         k[4] = k[0] % 10;
 
         clrscr();
-        gotoxy(10, 5);
+
+        for (i = 0; i < 5; i++)  // move cursor down again after clearing
+            printf("\n");
+
+        gotoxy(10);
+
         printf("%d%d%d%d", k[1], k[2], k[3], k[4]);
     }
 
