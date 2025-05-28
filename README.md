@@ -8,23 +8,15 @@ ATTENTION TO COPY & PASTE >
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main() 
+main()
 {
-    int i,j,k;
-    j=0;
-    while (j<256) 
+    int i;
+    for(i=0;i<=10;i++)
     {
-        k=0x80;
-        while(k)
-        {
-            if (k & j)
-                printf("1");
-            else
-                printf("0");
-        k = k >> 1;
-        }
-    printf("\n");
-    j++;
+        if(i==5)
+            continue;
+        else
+            printf("%d",i);
     }
 }
 ```
@@ -34,23 +26,17 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main() 
+main()
 {
-    int i,j,k;
-    j=0;
-    for(j=0;j<256;j++)
+    int i;
+    i=0;
+    while(i<=10)
     {
-        k=128;
-        for(i=0;i<8;i++)
-        {
-            if (k & j)
-                printf("1");
-            else
-                printf("0");
-        k = k >> 1;
-        }
-    printf("\n");
-    j++;
+        if(i==5)
+            continue;
+        else
+            printf("%d",i);
+        i++;
     }
 }
 ```
@@ -60,15 +46,15 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main() 
+main()
 {
-    int i,j,k;
-    j=0;
-    for(j=0;j<256;j++)
+    int i;
+    for(i=0;i<=10;i++)
     {
-        for(k=128;k;k>>=1)
-        printf(k&j?"1":"0");
-    printf("\n");
+        if(i==5)
+            break;
+        else
+            printf("%d",i);
     }
 }
 ```
@@ -77,45 +63,19 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-void print_binary(int x);
-int get_hex_H(int);
-int get_hex_L(int);
-
-main()  
+main()
 {
-    int x;
-    printf("Input x:");
-    scanf("%x", &x);
-    printf("x's Hex: %X \n", x);
-    print_binary(x);
-    printf("\n");
-    printf("X's H: %2X\n", get_hex_H(x));
-    printf("X's L: %2X\n", get_hex_L(x));
-}
-
-void print_binary(int x)
-{
-    int y = 0x80;
-    while (y)
-    {
-        if (x & y)
-            printf("1");
-        else
-            printf("0");  
-        y = y >> 1;
-    }
-}
-int get_hex_H(int x)
-{
-    int k=0xf0,y;
-    y=(x&k)>>4;
-    return y;
-}
-int get_hex_L(int x)
-{
-    int k=0x0f;
-    return (x&k);
-}            
+    int i;
+    i=0;
+ABC:
+    if(i==10)
+        goto XYZ;
+    printf("%d",i);
+    i++;
+    goto ABC;
+XYZ:
+    return;
+} 
 ```
 五 (5)
 ===
