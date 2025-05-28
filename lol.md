@@ -1,7 +1,6 @@
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 #include <conio.h>
 
 void clrscr() {
@@ -9,32 +8,34 @@ void clrscr() {
 }
 
 void gotoxy(int x, int y) {
-    COORD coord = { (SHORT)x, (SHORT)y };
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    int i;
+    for (i = 0; i < y; i++) {
+        printf("\n");
+    }
+    for (i = 0; i < x; i++) {
+        printf(" ");
+    }
 }
 
 main() {
-    int i, k[5];
+    int i, j, k[5];
 
-    srand(5678);
-    clrscr();
+    srand(1234);
 
-    for (i = 0; i < 100; i++) {
-        k[0] = rand() % 9000 + 1000;   
+    for (i = 0; i < 100000; i++) {
+        k[0] = rand() % 9000 + 1000;
 
         k[1] = k[0] / 1000;
         k[2] = (k[0] % 1000) / 100;
         k[3] = (k[0] % 100) / 10;
         k[4] = k[0] % 10;
 
-        gotoxy(10, 5);                
+        clrscr();
+        gotoxy(10, 5);
         printf("%d%d%d%d", k[1], k[2], k[3], k[4]);
-
-        Sleep(200);                    
     }
 
-    gotoxy(10, 6);
-    printf("Done! Press any key...");
+    printf("\n\nPress any key to exit...");
     getch();
 
     return 0;
