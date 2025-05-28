@@ -121,8 +121,9 @@ main() {
 }
 
 ```
+六 (6）
 ===
-
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
@@ -141,11 +142,10 @@ void gotoxy(int x, int y) {
     }
 }
 
-int main() {
+main() 
+{
     int number = 0;
     char ch;
-    int posX = 35; // center horizontally
-    int posY = 10; // center vertically
 
     while (1) {
         clrscr();
@@ -169,3 +169,4 @@ int main() {
 
     return 0;
 }
+```
