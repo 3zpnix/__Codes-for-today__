@@ -122,3 +122,50 @@ main() {
 
 ```
 ===
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+void clrscr() {
+    system("cls");
+}
+
+void gotoxy(int x, int y) {
+    int i;
+    for (i = 0; i < y; i++) {
+        printf("\n");
+    }
+    for (i = 0; i < x; i++) {
+        printf(" ");
+    }
+}
+
+int main() {
+    int number = 0;
+    char ch;
+    int posX = 35; // center horizontally
+    int posY = 10; // center vertically
+
+    while (1) {
+        clrscr();
+        gotoxy(posX, posY);
+        printf("%04d", number);
+
+        ch = getch();
+
+        if (ch == 'a' || ch == 'A') {
+            if (number < 9999)
+                number++;
+        } else if (ch == 's' || ch == 'S') {
+            if (number > 0)
+                number--;
+        } else if (ch == 'c' || ch == 'C') {
+            number = 0;
+        } else if (ch == 27) { // ESC to exit
+            break;
+        }
+    }
+
+    return 0;
+}
