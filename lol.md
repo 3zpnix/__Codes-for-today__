@@ -3,10 +3,6 @@
 #include <stdlib.h>
 #include <conio.h>
 
-void clrscr() {
-    system("cls");
-}
-
 void gotoxy(int x, int y) {
     int i;
     for (i = 0; i < y; i++) {
@@ -22,7 +18,8 @@ main() {
 
     srand(1234);
 
-    for (i = 0; i < 100000; i++) {
+    gotoxy(10, 5);  
+    for (i = 0; i < 1000; i++) {
         k[0] = rand() % 9000 + 1000;
 
         k[1] = k[0] / 1000;
@@ -30,9 +27,7 @@ main() {
         k[3] = (k[0] % 100) / 10;
         k[4] = k[0] % 10;
 
-        clrscr();
-        gotoxy(10, 5);
-        printf("%d%d%d%d", k[1], k[2], k[3], k[4]);
+        printf("\r%d%d%d%d", k[1], k[2], k[3], k[4]); 
     }
 
     printf("\n\nPress any key to exit...");
