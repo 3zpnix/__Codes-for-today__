@@ -161,7 +161,7 @@ main()
                 number--;
         } else if (ch == 'c' || ch == 'C') {
             number = 0;
-        } else if (ch == 27) { // ESC to exit
+        } else if (ch == 27) { 
             break;
         }
     }
