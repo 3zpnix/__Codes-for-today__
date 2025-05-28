@@ -1,5 +1,4 @@
 ```
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -15,12 +14,12 @@ void gotoxy(int x, int y) {
 }
 
 main() {
-    int i, j, k[5];
+    int k[5], j;
 
     srand(5678);
     clrscr();
 
-    for (i = 0; i < 100; i++) {
+    while (1) {
         k[0] = rand() % 9000 + 1000;
 
         k[1] = k[0] / 1000;
@@ -32,13 +31,9 @@ main() {
         printf("%d%d%d%d", k[1], k[2], k[3], k[4]);
 
         for (j = 0; j < 10000000; j++) {
-            int x = j * j; 
+            int x = j * j;
         }
     }
-
-    gotoxy(10, 6);
-    printf("Done! Press any key...");
-    getch();
 
     return 0;
 }
