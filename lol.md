@@ -3,22 +3,11 @@
 #include <stdlib.h>
 #include <conio.h>
 
-void gotoxy(int x, int y) {
-    int i;
-    for (i = 0; i < y; i++) {
-        printf("\n");
-    }
-    for (i = 0; i < x; i++) {
-        printf(" ");
-    }
-}
-
-main() {
-    int i, j, k[5];
+int main() {
+    int i, k[5];
 
     srand(1234);
 
-    gotoxy(10, 5);  
     for (i = 0; i < 1000; i++) {
         k[0] = rand() % 9000 + 1000;
 
@@ -27,7 +16,8 @@ main() {
         k[3] = (k[0] % 100) / 10;
         k[4] = k[0] % 10;
 
-        printf("\r%d%d%d%d", k[1], k[2], k[3], k[4]); 
+        printf("\r          ");  // clear previous number (overwrite with spaces)
+        printf("\r          %d%d%d%d", k[1], k[2], k[3], k[4]);  // overwrite again
     }
 
     printf("\n\nPress any key to exit...");
