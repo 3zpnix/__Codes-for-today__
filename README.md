@@ -122,3 +122,60 @@ main() {
 
 ```
 ===
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+
+void clrscr() {
+    system("cls");
+}
+
+void gotoxy(int x, int y) {
+    COORD coord = { (SHORT)x, (SHORT)y };
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+main() {
+    int k[5], j;
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    int screenWidth, screenHeight;
+    int centerX, centerY;
+
+    srand(5678);
+    clrscr();
+
+    // Get console screen size
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+    screenWidth = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+    screenHeight = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+
+    centerY = screenHeight / 2;
+
+    while (1) {
+        k[0] = rand() % 9000 + 1000;
+
+        k[1] = k[0] / 1000;
+        k[2] = (k[0] % 1000) / 100;
+        k[3] = (k[0] % 100) / 10;
+        k[4] = k[0] % 10;
+
+        // Format the number and get its length
+        char buffer[10];
+        sprintf(buffer, "%d%d%d%d", k[1], k[2], k[3], k[4]);
+
+        // Center horizontally based on text width
+        centerX = (screenWidth - strlen(buffer)) / 2;
+
+        gotoxy(centerX, centerY);
+        printf("%s", buffer);
+
+        for (j = 0; j < 10000000; j++) {
+            int x = j * j;
+        }
+    }
+
+    return 0;
+}
+```
