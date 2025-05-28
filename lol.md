@@ -1,6 +1,8 @@
 ```
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include <conio.h>
 
 void clrscr() {
@@ -8,36 +10,36 @@ void clrscr() {
 }
 
 void gotoxy(int x, int y) {
-    int i;
-    for (i = 0; i < y; i++) {
-        printf("\n");
-    }
-    for (i = 0; i < x; i++) {
-        printf(" ");
-    }
+    COORD coord = { (SHORT)x, (SHORT)y };
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-int main() {
-    int i, k[5];
-    int posX = 35;  // horizontal center (adjust to your console width)
-    int posY = 10;  // vertical center (adjust to your console height)
+main() {
+    int i, j, k[5];
 
-    srand(1234);
+    srand(5678);
+    clrscr();
 
-    for (i = 0; i < 100000; i++) {
+    for (i = 0; i < 100; i++) {
         k[0] = rand() % 9000 + 1000;
+
         k[1] = k[0] / 1000;
         k[2] = (k[0] % 1000) / 100;
         k[3] = (k[0] % 100) / 10;
         k[4] = k[0] % 10;
 
-        clrscr();
-        gotoxy(posX, posY);
+        gotoxy(10, 5);
         printf("%d%d%d%d", k[1], k[2], k[3], k[4]);
+
+        for (j = 0; j < 10000000; j++) {
+            int x = j * j; 
+        }
     }
 
-    printf("\n\nPress any key to exit...");
+    gotoxy(10, 6);
+    printf("Done! Press any key...");
     getch();
+
     return 0;
 }
 ```
