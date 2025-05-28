@@ -1,3 +1,4 @@
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -38,3 +39,4 @@ main() {
 
     return 0;
 }
+```
