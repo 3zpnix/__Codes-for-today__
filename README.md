@@ -46,25 +46,21 @@ for(i=0;i<3;i++);
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h> 
+#include <time.h>
 
-main()
-{
+main() {
     int A[3][5], i, j;
     srand((unsigned)time(NULL));
 
-    for(i = 0; i < 3; i++) 
-    {
-        for(j = 0; j < 5; j++) 
-        {
-            A[i][j] = rand() % 100; 
+    for(i=0;i<3;i++) {
+        for(j=0;j<5;j++) {
+            A[i][j]=rand()%100;
         }
     }
 
-    for(i = 0; i < 3; i++) {
-        for(j = 0; j < 5; j++) 
-        {
-            printf("A[%d][%d]: %d\t", i, j, A[i][j]);
+    for(i=0;i<3;i++) {
+        for(j=0;j<5;j++) {
+            printf("A[%d][%d]:%d\t",i,j,A[i][j]);
         }
         printf("\n");
     }
@@ -77,23 +73,18 @@ main()
 #include <stdio.h>
 #include <stdlib.h>
 
-main()
-{
+main() {
     int A[3][5], i, j;
-
-    i = 0;
-    while (i < 3)
-    {
-        j = 0;
-        while (j < 5)
-        {
-            printf("Enter A[%d][%d]: ", i, j);
-            scanf("%d", &A[i][j]);
+    i=0;
+    while(i<3) {
+        j=0;
+        while(j<5) {
+            printf("Enter A[%d][%d]:",i,j);
+            scanf("%d",&A[i][j]);
             j++;
         }
         i++;
     }
-
     return 0;
 }
 ```
