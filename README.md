@@ -76,21 +76,25 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
+
 main()
 {
-int A[3][5],i,j;
-i=0;
-while(i<3)
-{
-    j=0;
-    while(j<5)
+    int A[3][5], i, j;
+
+    i = 0;
+    while (i < 3)
     {
-        printf("A[%d][%d]:%d",i,j);
-        scanf("%d",&A[i][j]);
-        j++;
+        j = 0;
+        while (j < 5)
+        {
+            printf("Enter A[%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+            j++;
         }
-    i++;
+        i++;
     }
+
+    return 0;
 }
 ```
 五 (5)
