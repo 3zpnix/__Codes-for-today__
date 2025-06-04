@@ -46,17 +46,29 @@ for(i=0;i<3;i++);
 ```
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <time.h> 
+
 main()
 {
-int A[3][5],i,j;
-srand((unsigned)time(NULL));
-for(i=0;i<3;i++);
-{
-    for(j=0;j<5;j++);
-        printf("A[%d][%d]:%d",i,j);
+    int A[3][5], i, j;
+    srand((unsigned)time(NULL));
+
+    for(i = 0; i < 3; i++) 
+    {
+        for(j = 0; j < 5; j++) 
+        {
+            A[i][j] = rand() % 100; 
+        }
+    }
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 5; j++) 
+        {
+            printf("A[%d][%d]: %d\t", i, j, A[i][j]);
+        }
         printf("\n");
     }
+    return 0;
 }
 ```
 四 (4)
