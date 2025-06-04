@@ -46,6 +46,7 @@ for(i=0;i<3;i++);
 ```
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 main()
 {
 int A[3][5],i,j;
