@@ -6,7 +6,20 @@ ATTENTION TO COPY & PASTE >
 一 (1)
 ===
 ```
+#include <stdio.h>
+#include <stdlib.h>
 
+main() 
+{
+    int age;
+    printf("Enter your age: ");
+    // Reads an integer
+    scanf("%d",&age);
+    // prints the age
+    printf("Age is: %d\n", age);
+    return 0;
+}
+    
 ```
 二 (2)
 ===
