@@ -103,21 +103,23 @@ main()
 ```
 #include <stdio.h>
 #include <stdlib.h>
-main()
+
+main() 
 {
-int A[3][5],i,j;
-i=0;
-while(i<3)
-{
-    j=0;
-    while(j<5)
-    {
-        printf("A[%d][%d]:%d",i,j,A[i][j]);
-        j++;
+    int A[3][5];
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 5; j++) {
+            A[i][j] = 0;
         }
-    printf("\n");
-    i++;
     }
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("A[%d][%d]:%d", i, j, A[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
 }
 ```
 六 (6）
