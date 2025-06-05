@@ -1,4 +1,4 @@
-<h1>大家好</h1> - please refresh every time 🤭
+<h1>大家好</h1> - you can check for reference 🤭
 
 ```
 ATTENTION TO COPY & PASTE >
