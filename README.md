@@ -1,7 +1,7 @@
-<h1>大家好</h1> - you can check for reference 🤭
+<h1>大家好</h1> - you can double check for reference 🤭
 
 ```
-ATTENTION TO COPY & PASTE >
+DON'T COPY & PASTE GUYS >
 ```
 一 (1)
 ===
