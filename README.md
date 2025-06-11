@@ -56,10 +56,10 @@ main()
 {
     int x, y, z;
 
-    printf("input x: ");
+    printf("Input x: ");
     scanf("%d", &x);
 
-    printf("input y: ");
+    printf("Input y: ");
     scanf("%d", &y);
 
     z = x + y;
@@ -90,10 +90,10 @@ main()
 
 void my_init(int* m, int* n, int* p)
 {
-    printf("input x: ");
+    printf("Input x: ");
     scanf("%d", m);
 
-    printf("input y: ");
+    printf("Input y: ");
     scanf("%d", n);
 }
 
@@ -131,10 +131,10 @@ main()
 
 void my_init(int* m, int* n, int* p)
 {
-    printf("input x: ");
+    printf("Input x: ");
     scanf("%d", m);
 
-    printf("input y: ");
+    printf("Input y: ");
     scanf("%d", n);
 }
 
